@@ -13,7 +13,7 @@ print("Harvard, Yale, %s, Stanford and other colleges around the world." % place
 print("We've all heard of %s and, for some, have wanted to go to them. " % place2)
 print("Going to %s has been considered necessary to be successful in life." % place3)
 print("We go to %s to get a job, train for a career and pursue our dreams." % place4)
-print("There's also the part of %s fun and maybe the chance of dating." % place5)
+print("There's also the part of having fun and the chance of %s." % place5)
 print("A lot of people consider %s the highlight of their life." % place7)
 print("Other %s are not sure that college is worth it for a variety of reasons." % place8)
 print("People should go to college because it helps you get %s, options, and %s." % (place9, place10))
