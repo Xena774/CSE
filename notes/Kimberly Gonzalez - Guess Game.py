@@ -4,16 +4,8 @@ guessesMade = 0
 user_won = False
 MyName = input("What's you name?")
 
-
-def winner():
-    print("You win, %s! Congrats!" % MyName)
-
-
-print("Well, %s, I am thinking of a number between 1 and 10." % MyName)
-
 while guessesMade < 5:
-    guess = input("Guess a number.")
-    guess = int(guess)
+    guess = int(input("Guess a number."))
     if guess == a:
         print("That's the correct number!")
         user_won = True
@@ -25,6 +17,6 @@ while guessesMade < 5:
         guessesMade += 1
 
 if user_won:
-    winner()
+    print("Well, %s, I am thinking of a number between 1 and 10." % MyName)
 else:
     print("You lost. Better luck next time. By the way the right number was %d" % a)
