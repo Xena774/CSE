@@ -1,14 +1,15 @@
 import random
 a = random.randint(1, 10)
 guessesMade = 0
-user_won = False
+guess = 0
 MyName = input("What's you name?")
 
-while guessesMade < 5:
+print("Well, %s, I am thinking of a number between 1 and 10." % MyName)
+
+while a != guess and guessesMade < 5:
     guess = int(input("Guess a number."))
     if guess == a:
         print("That's the correct number!")
-        user_won = True
     elif guess > a:
         print("That number was too high")
         guessesMade += 1
@@ -16,7 +17,7 @@ while guessesMade < 5:
         print("That number was too small")
         guessesMade += 1
 
-if user_won:
-    print("Well, %s, I am thinking of a number between 1 and 10." % MyName)
+if guess == a:
+    print("Congrats, %s, you guessed the number. Good for you." % MyName)
 else:
     print("You lost. Better luck next time. By the way the right number was %d" % a)
