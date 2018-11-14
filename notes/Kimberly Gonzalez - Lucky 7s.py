@@ -14,11 +14,9 @@ while playing and current_money > 0:
         current_money += 4
         print("You rolled a 7. Nice.")
         total_roles += 1
-        top_money += 4
         if current_money > top_money:
-            current_money = top_money
-        else:
-            print("Your top money is %d" % top_money)
+            top_money = current_money
+            top_round = total_roles
     else:
         current_money -= 1
         print("Roll again.")
