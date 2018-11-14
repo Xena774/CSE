@@ -1,11 +1,10 @@
 import random
 current_money = 15
-playing = True
 total_roles = 0
 top_money = 15
 top_round = 0
 
-while playing and current_money > 0:
+while current_money > 0:
     dice_roll1 = random.randint(1, 6)
     dice_roll2 = random.randint(1, 6)
     print(dice_roll1, dice_roll2)
