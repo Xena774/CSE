@@ -147,3 +147,30 @@ print(3 != 4)  # is not equal to
 a = 3 # a is set to 3
 a == 3 # Is a equal to 3?
 """
+
+# Creating a list
+fruit = ['apples', 'oranges', 'blackberries', 'strawberries', 'blueberries', 'raspberries', 'pineapple',
+         'mango', 'coconut']
+print(fruit)
+
+
+# Pulling items from a list
+print(fruit[1])
+
+# Getting from the length of a list
+print(len(fruit))
+print("The length of the list is %d" % len(fruit))
+
+# Modify Lists
+fruit[8] = 'Banana'
+print(fruit)
+
+# Looping through lists
+for item in fruit:
+    print(item)
+
+words = ['computer', 'mouse', 'apples', 'battery', 'touchscreen', 'files']
+words[2] = 'keyboard'
+print(words[2])
+print(words)
+print("The last thing in the list is %s" % words[len(words)-1])
