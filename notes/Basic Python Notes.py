@@ -174,3 +174,62 @@ words[2] = 'keyboard'
 print(words[2])
 print(words)
 print("The last thing in the list is %s" % words[len(words)-1])
+
+food_list = ['pizza', 'tamales', 'tacos', 'pie', 'enchiladas', ' burrito', 'sushi', 'poke', 'flan', 'mac and cheese'
+             , 'noodles', 'chicken', 'chili', 'hot wings', 'salmon', 'chips', 'lasagna', 'soup', 'fettuccine',
+             'salad', 'steak']
+
+# Slicing
+print(food_list[2:5])
+print(food_list[3:4])
+print(food_list[10:])
+print(food_list[:5])
+
+# adding stuff to a list(part 1)
+food_list.append("orange")
+food_list.append("bacon")
+print(food_list)
+# Everything is in the form object.method(parameters)
+
+# Adding to the list(not at the end)
+food_list.insert(2, "Ramen")
+print(food_list)
+
+# Removing from a list
+food_list.remove("tacos")
+food_list.remove("pie")
+print(food_list)
+# This removes the specific item from the list
+
+# Removing from a list(pt. 2)
+# Sometimes you don't know what is in the list but you know
+# you want to get rid of something at a specific index
+food_list.pop(0)
+print(food_list)
+# Notice that "pizza" is no longer in the list because was it at index 0.
+
+# Practice time...
+
+car_types = ['mustang', 'gmc', 'ferrari']
+car_types.append("van")
+car_types.remove("mustang")
+car_types.remove("gmc")
+car_types.remove("ferrari")
+print(car_types)
+
+# Finding things in a list
+print(food_list.index("chicken"))
+# This printed 9 for me, so chicken must be at 9
+# This is an easy way of finding things in a list
+
+# Things I notice people do:
+brands = ("apple", "samsung", "HTC")
+# This is a TUPLE, not a list. Tuples are immutable (cannot be changed)
+
+# Changing things into a list
+string1 = "turquoise"
+list1 = list(string1)
+print(list1)
+
+# Changing back into a string (list -->string)
+print("".join(list1))
