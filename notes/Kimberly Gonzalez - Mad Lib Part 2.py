@@ -1,6 +1,6 @@
 words = [
     input("noun?"),
-    input("adjective?"),
+    input("noun?"),
     input("noun?"),
     input("noun?"),
     input("verb ending in ing?"),
@@ -8,7 +8,7 @@ words = [
     input("noun?"),
     input("plural noun?"),
     input("plural noun?"),
-    input("plural noun?"),
+    input("business?"),
 ]
 print()
 print("Harvard, Yale, %s, Stanford and other colleges around the world." % words[0])
@@ -19,3 +19,4 @@ print("There's also the part of having fun and the chance of %s." % words[4])
 print("A lot of people consider %s the highlight of their life." % words[5])
 print("Other %s are not sure that college is worth it for a variety of reasons." % words[6])
 print("People should go to college because it helps you get %s, options, and %s." % (words[7], words[8]))
+print(" The median weekly earnings for a person with a doctoral degree was $1,623 and according to %s." % words[9])
