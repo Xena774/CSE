@@ -12,7 +12,7 @@
     <SUITE FILE_PATH="coverage/notes$Kimberly_Gonzalez___Lucky_7s.coverage" NAME="Kimberly Gonzalez - Lucky 7s Coverage Results" MODIFIED="1543357089461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes$Kimberly_Gonzalez___Guess_Game.coverage" NAME="Kimberly Gonzalez - Guess Game Coverage Results" MODIFIED="1541802116563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes$Basic_Python_Notes.coverage" NAME="Basic Python Notes Coverage Results" MODIFIED="1543529766755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/notes$Kimberly_Gonzalez___Python_Challenges.coverage" NAME="Kimberly Gonzalez - Python Challenges Coverage Results" MODIFIED="1544049347015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/notes$Kimberly_Gonzalez___Python_Challenges.coverage" NAME="Kimberly Gonzalez - Python Challenges Coverage Results" MODIFIED="1544135931777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes$Kimberly_Gonzalez___Mad_Lib.coverage" NAME="Kimberly Gonzalez - Mad Lib Coverage Results" MODIFIED="1540933090269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes$Kimberly_Gonzalez___Mad_Lib_Part_2.coverage" NAME="Kimberly Gonzalez - Mad Lib Part 2 Coverage Results" MODIFIED="1543444030640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/notes$Kimberly_Gonzalez___Hangman.coverage" NAME="Kimberly Gonzalez - Hangman Coverage Results" MODIFIED="1543530665280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -21,7 +21,7 @@
     <session id="1178273341">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="25" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.111" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -41,7 +41,8 @@
           <entry key="project.open.time.62" value="2" />
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.65" value="1" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.open.time.69" value="1" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -57,13 +58,13 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="14615" />
+          <entry key="Python" value="15039" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="14615" />
+          <entry key="py" value="15039" />
         </counts>
       </usages-collector>
     </session>
@@ -91,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Basic Python Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4233">
-              <caret line="249" selection-start-line="249" selection-end-line="249" />
+            <state relative-caret-position="137">
+              <caret line="229" column="21" lean-forward="true" selection-start-line="229" selection-start-column="21" selection-end-line="229" selection-end-column="21" />
               <folding>
                 <marker date="1543874821436" expanded="true" signature="1414:1419" ph="..." />
                 <marker date="1543874821436" expanded="true" signature="1497:1502" ph="..." />
@@ -108,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Kimberly Gonzalez - Hangman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="119">
+              <caret line="7" column="37" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="37" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -120,18 +121,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Kimberly Gonzalez - Python Challenges.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="171">
+              <caret line="76" column="35" lean-forward="true" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
               <folding>
-                <marker date="1544049346921" expanded="true" signature="56:61" ph="..." />
-                <marker date="1544049346921" expanded="true" signature="159:296" ph="..." />
-                <marker date="1544049346921" expanded="true" signature="317:322" ph="..." />
-                <marker date="1544049346921" expanded="true" signature="390:575" ph="..." />
-                <marker date="1544049346921" expanded="true" signature="593:598" ph="..." />
-                <marker date="1544049346921" expanded="true" signature="662:667" ph="..." />
-                <marker date="1544049346921" expanded="true" signature="804:986" ph="..." />
-                <marker date="1544049346921" expanded="true" signature="1046:1051" ph="..." />
-                <marker date="1544049346921" expanded="true" signature="1496:1605" ph="..." />
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1544135931683" expanded="true" signature="70:75" ph="..." />
+                <marker date="1544135931683" expanded="true" signature="173:310" ph="..." />
+                <marker date="1544135931683" expanded="true" signature="331:336" ph="..." />
+                <marker date="1544135931683" expanded="true" signature="404:589" ph="..." />
+                <marker date="1544135931683" expanded="true" signature="607:612" ph="..." />
+                <marker date="1544135931683" expanded="true" signature="676:681" ph="..." />
+                <marker date="1544135931683" expanded="true" signature="822:1004" ph="..." />
+                <marker date="1544135931683" expanded="true" signature="1064:1069" ph="..." />
+                <marker date="1544135931683" expanded="true" signature="1256:1470" ph="..." />
+                <marker date="1544135931683" expanded="true" signature="1598:1707" ph="..." />
               </folding>
             </state>
           </provider>
@@ -166,9 +169,9 @@
         <option value="$PROJECT_DIR$/Kimberly Gonzalez - Lucky 7s.py" />
         <option value="$PROJECT_DIR$/Kimberly Gonzalez - Mad Lib.py" />
         <option value="$PROJECT_DIR$/Kimberly Gonzalez - Mad Lib Part 2.py" />
-        <option value="$PROJECT_DIR$/Kimberly Gonzalez - Hangman.py" />
         <option value="$PROJECT_DIR$/Basic Python Notes.py" />
         <option value="$PROJECT_DIR$/Kimberly Gonzalez - Fix It.py" />
+        <option value="$PROJECT_DIR$/Kimberly Gonzalez - Hangman.py" />
         <option value="$PROJECT_DIR$/Kimberly Gonzalez - Python Challenges.py" />
       </list>
     </option>
@@ -366,7 +369,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35552195" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36081696" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -448,10 +451,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Kimberly Gonzalez - Lucky 7s.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Basic Python Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4233">
-          <caret line="249" selection-start-line="249" selection-end-line="249" />
+        <state relative-caret-position="137">
+          <caret line="229" column="21" lean-forward="true" selection-start-line="229" selection-start-column="21" selection-end-line="229" selection-end-column="21" />
           <folding>
             <marker date="1543874821436" expanded="true" signature="1414:1419" ph="..." />
             <marker date="1543874821436" expanded="true" signature="1497:1502" ph="..." />
@@ -465,35 +475,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Kimberly Gonzalez - Hangman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="119">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="37" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Kimberly Gonzalez - Lucky 7s.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Kimberly Gonzalez - Python Challenges.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="171">
+          <caret line="76" column="35" lean-forward="true" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
           <folding>
-            <marker date="1544049346921" expanded="true" signature="56:61" ph="..." />
-            <marker date="1544049346921" expanded="true" signature="159:296" ph="..." />
-            <marker date="1544049346921" expanded="true" signature="317:322" ph="..." />
-            <marker date="1544049346921" expanded="true" signature="390:575" ph="..." />
-            <marker date="1544049346921" expanded="true" signature="593:598" ph="..." />
-            <marker date="1544049346921" expanded="true" signature="662:667" ph="..." />
-            <marker date="1544049346921" expanded="true" signature="804:986" ph="..." />
-            <marker date="1544049346921" expanded="true" signature="1046:1051" ph="..." />
-            <marker date="1544049346921" expanded="true" signature="1496:1605" ph="..." />
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1544135931683" expanded="true" signature="70:75" ph="..." />
+            <marker date="1544135931683" expanded="true" signature="173:310" ph="..." />
+            <marker date="1544135931683" expanded="true" signature="331:336" ph="..." />
+            <marker date="1544135931683" expanded="true" signature="404:589" ph="..." />
+            <marker date="1544135931683" expanded="true" signature="607:612" ph="..." />
+            <marker date="1544135931683" expanded="true" signature="676:681" ph="..." />
+            <marker date="1544135931683" expanded="true" signature="822:1004" ph="..." />
+            <marker date="1544135931683" expanded="true" signature="1064:1069" ph="..." />
+            <marker date="1544135931683" expanded="true" signature="1256:1470" ph="..." />
+            <marker date="1544135931683" expanded="true" signature="1598:1707" ph="..." />
           </folding>
         </state>
       </provider>

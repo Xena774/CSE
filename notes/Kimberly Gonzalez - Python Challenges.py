@@ -1,4 +1,5 @@
 import datetime
+import string
 
 
 def challenge1(first_name, last_name):
@@ -52,7 +53,7 @@ print(challenge6(4))
 
 
 def challenge7(n):
-    return n*n+n
+    return n * n + n
 
 
 print(challenge7(9))
@@ -78,14 +79,16 @@ def challenge9(letter):
 
 print(challenge9("r"))
 
-number = ['5', '7', '5', '6']
+number = ['5', '7', '8', '6']
+length = 0
 
 
 def challenge10():
-    if int == number:
-        return "This string is numeric"
-    else:
-        return "This string is not numeric"
+    for i in range(len(number)):
+        if number[i] == string.ascii_letters:
+            return "This string is not numeric"
+        else:
+            return "This string is not numeric"
 
 
 print(challenge10())
