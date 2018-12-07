@@ -79,19 +79,20 @@ def challenge9(letter):
 
 print(challenge9("r"))
 
-number = ['5', '7', '8', '6']
-length = 0
+number = ['4', '5', '9', '6']
+letters = list(string.ascii_lowercase)
 
 
-def challenge10():
-    for i in range(len(number)):
-        if number[i] == string.ascii_letters:
+def challenge10(lis):
+    for i in range(len(lis)):
+        if number[i] in letters:
+            lis.pop(i)
             return "This string is not numeric"
         else:
-            return "This string is not numeric"
+            return "This string is numeric"
 
 
-print(challenge10())
+print(challenge10(number))
 
 datetime.datetime.now()
 datetime.datetime(2009, 1, 6, 15, 8, 24, 78915)
