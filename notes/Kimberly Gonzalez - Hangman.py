@@ -13,17 +13,20 @@ word = list(random_word)
 
 while guesses_made < 8 and playing:
     letter = input("Guess a letter")
-    if letter in random_word:
+    if letter in random_word and letter not in letters_guesses:
         print("You guessed right")
-        guesses_made += 1
-        letters_guesses.append(letter)
-        letters_guessed_right.append(letter)
-        if word != letters_guessed_right and len(letters_guessed_right) == len(word):
-            playing = False
-        elif word == letters_guessed_right and len(letters_guessed_right) == len(word):
-            playing = False
+        if letter not in letters_guesses:
+            guesses_made += 1
+            letters_guesses.append(letter)
+            letters_guessed_right.append(letter)
+            if word != letters_guessed_right and len(letters_guessed_right) == len(word):
+                playing = False
+            elif word == letters_guessed_right and len(letters_guessed_right) == len(word):
+                playing = False
+        else:
+            print("You already guessed this letter")
     else:
-        print("You guessed wrong")
+        print("You guessed wrong or already guessed this letter")
         guesses_made += 1
         letters_guesses.append(letter)
 

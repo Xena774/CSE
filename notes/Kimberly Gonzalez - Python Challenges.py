@@ -70,8 +70,8 @@ print(challenge8(500))
 vowels = ['a', 'e', 'i', 'o', 'u']
 
 
-def challenge9(letter):
-    if letter in vowels:
+def challenge9(letters):
+    if letters in vowels:
         return "This is a vowel"
     else:
         return "This is a constant"
@@ -79,14 +79,13 @@ def challenge9(letter):
 
 print(challenge9("r"))
 
-number = ['4', '5', '9', '6']
-letters = list(string.ascii_lowercase)
+number = ['9', '5', '7', '6']
+letter = list(string.ascii_letters)
 
 
 def challenge10(lis):
     for i in range(len(lis)):
-        if number[i] in letters:
-            lis.pop(i)
+        if lis[i] is any(letter):
             return "This string is not numeric"
         else:
             return "This string is numeric"
@@ -109,3 +108,4 @@ def challenge12(a, b):
 
 
 print(challenge12(3, 4))
+print(12 % 9)
