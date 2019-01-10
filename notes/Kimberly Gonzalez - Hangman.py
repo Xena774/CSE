@@ -1,15 +1,13 @@
 import random
-import string
 print("Welcome to hangman!")
 words = ['hot', 'cold', 'fire', 'ice', 'clock', 'tiger', 'family', 'edison', 'hamburger', 'computer', 'pizza', 'mouse',
-         'winter', 'school', 'child', 'door', 'change', 'justice', 'rock', 'chess']
+         'winter', 'school', 'child', 'Goodbye', 'change', 'justice', 'rock', 'check?']
 letters_guesses = []
 letters_guessed_right = []
-letters = list(string.ascii_lowercase)
 guesses_made = 0
 playing = True
 random_word = random.choice(words)
-word = list(random_word)
+word = str(random_word)
 
 while guesses_made < 8 and playing:
     letter = input("Guess a letter")
@@ -36,6 +34,8 @@ if not playing:
 else:
     print("You didn't win. Better luck next time.")
 
-print("The correct word is %s" % random_word)
-print("The letters you guessed were %s" % letters_guesses)
-print("The letters right were %s" % letters_guessed_right)
+print("The correct word is %s." % random_word)
+print("The letters right were:")
+print("".join(letters_guesses))
+print("The letters right were:")
+print("" .join(letters_guessed_right))
