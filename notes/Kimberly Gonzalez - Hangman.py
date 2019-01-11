@@ -7,7 +7,7 @@ letters_guessed_right = []
 guesses_made = 0
 playing = True
 random_word = random.choice(words)
-word = str(random_word)
+word = list(random_word)
 
 while guesses_made < 8 and playing:
     letter = input("Guess a letter")
@@ -15,8 +15,8 @@ while guesses_made < 8 and playing:
         print("You guessed right")
         if letter not in letters_guesses:
             guesses_made += 1
-            letters_guesses.append(letter)
             letters_guessed_right.append(letter)
+            print("Guesses made so far: %d" % guesses_made)
             if word != letters_guessed_right and len(letters_guessed_right) == len(word):
                 playing = False
             elif word == letters_guessed_right and len(letters_guessed_right) == len(word):
@@ -26,7 +26,6 @@ while guesses_made < 8 and playing:
     else:
         print("You guessed wrong or already guessed this letter")
         guesses_made += 1
-        letters_guesses.append(letter)
 
 if not playing:
     print()
