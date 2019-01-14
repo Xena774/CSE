@@ -7,19 +7,17 @@ letters_guessed_right = []
 guesses_made = 0
 playing = True
 random_word = random.choice(words)
-word = list(random_word)
 
 while guesses_made < 8 and playing:
     letter = input("Guess a letter")
     if letter in random_word and letter not in letters_guesses:
         print("You guessed right")
         if letter not in letters_guesses:
-            guesses_made += 1
             letters_guessed_right.append(letter)
-            print("Guesses made so far: %d" % guesses_made)
-            if word != letters_guessed_right and len(letters_guessed_right) == len(word):
+            print("Number of guesses made so far: %d" % guesses_made)
+            if random_word != letters_guessed_right and len(letters_guessed_right) == len(random_word):
                 playing = False
-            elif word == letters_guessed_right and len(letters_guessed_right) == len(word):
+            elif word == letters_guessed_right and len(letters_guessed_right) == len(random_word):
                 playing = False
         else:
             print("You already guessed this letter")
