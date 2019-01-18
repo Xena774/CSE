@@ -5,7 +5,7 @@ words = ['hot', 'cold', 'fire', 'ice', 'clock', 'tiger', 'family', 'edison', 'ha
          'winter', 'school', 'child', 'Goodbye', 'change', 'justice', 'rock', 'hello?']
 letters_guessed = []
 letters_guessed_right = []
-guesses_made = 0
+guesses_made = 8
 playing = True
 random_word = random.choice(words)
 hidden = list(random_word)
@@ -17,21 +17,26 @@ for i in range(len(hidden)):
         hidden.pop(i)
         hidden.insert(i, "*")
 
-while guesses_made < 8 and playing:
+while guesses_made != 0 and playing:
     letter = input("Guess a letter")
-    if letter in random_word and letter not in letters_guessed:
-        print("You guessed right")
-        print("Number of guesses made so far: %d" % guesses_made)
-        letters_guessed_right.append(letter)
-        
-        if random_word != letters_guessed_right and len(letters_guessed_right) == len(random_word):
-            playing = False
-        elif random_word == letters_guessed_right and len(letters_guessed_right) == len(random_word):
-            playing = False
-    else:
-        print("You guessed wrong or already guessed this letter")
+    if letter in letters_guessed:
+        print("You already guessed this letter")
+    elif letter not in random_word:
+        print("You guessed wrong. Try again.")
         guesses_made += 1
         letters_guessed.append(letter)
+    else:
+        print("You guessed right")
+        print("Number of guesses made so left: %d" % guesses_made)
+        letters_guessed_right.append(letter)
+        letters_guessed.append(letter)
+        for i in range(len(hidden)):
+            if random_word[i] in letters_guessed_right:
+                hidden.pop(i)
+                hidden.insert(i, letter)
+        print("".join(hidden))
+        if random_word == random_word:
+            playing = False
 
 if not playing:
     print()
@@ -40,7 +45,7 @@ else:
     print("You didn't win. Better luck next time.")
 
 print("The correct word is %s." % random_word)
-print("The letters right were:")
+print("The letters guessed were:")
 print("".join(letters_guessed))
 print("The letters right were:")
 print("" .join(letters_guessed_right))
