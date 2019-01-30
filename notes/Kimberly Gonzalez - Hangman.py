@@ -16,7 +16,6 @@ for i in range(len(hidden)):
         hidden.pop(i)
         hidden.insert(i, "*")
 
-print(hidden)
 while guesses_made != 0 and playing:
     letter = input("Guess a letter").lower()
     if letter in letters_guessed:
