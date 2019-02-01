@@ -88,3 +88,8 @@ for state, info in complex_dictionary.items():
         print(desc)
         print("-" * 20)
     print("=" * 20)
+
+# Other Notes
+states["MN"] = "Mississippi?"  # This isn't Minnesota
+
+states["MN"] = "Minnesota"  # Fixed it
