@@ -1,13 +1,18 @@
 world_map = {
-    'R19A': {
-        'NAME': "Mr. Wiebe's room",
-        'DESCRIPTION': "This is the room that you are in.",
+    'Fresno': {
+        'NAME': "Fresno",
+        'DESCRIPTION': "Welcome to Fresno! Ahh, Fresno. Nestled in California's San Joaquin Valley. This is the fifth "
+                       "most populous city in the state. We have a college called Fresno State University which ranked"
+                       "a whooping 223 in National College Universities.",
         'PATHS': {
-            'NORTH': "PARKING_LOT"
+            'NORTH': "Quebec",
+            'EAST': "Manhattan",
+            'SOUTH': "Belize",
+            'WEST': "Oahu"
         }
     },
-    'PARKING_LOT': {
-        'NAME': "A Parking Lot",
+    'Pitt_Lake': {
+        'NAME': "Pitt Lake",
         'DESCRIPTION': "There are a few cars parked here.",
         'PATHS': {
             'SOUTH': 'R19A'
