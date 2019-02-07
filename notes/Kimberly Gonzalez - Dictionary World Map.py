@@ -54,6 +54,102 @@ world_map = {
         'PATHS': {
             "SOUTH": "Pitt_Lake"
         }
+    },
+    'London': {
+        'NAME': 'London',
+        'DESCRIPTION': "Welcome to London. Located in the United Kingdom and traveled to by many people. There's"
+                       "plenty to see and is the ultimate location spot for many. Don't you just love it. Everybody "
+                       "here talks with a posh accent.",
+        'PATHS': {
+            "WEST": "Pitt_Lake",
+            "EAST": "London"
+        }
+    },
+    'Belize': {
+        'NAME': "Belize",
+        'DESCRIPTION': "Welcome to Belize. This country is located in South America. Here you can find some temples"
+                       "from when the Mayans lived here. You have found some artifacts that have been left behind "
+                       "by the Mayans",
+        'PATHS': {
+            "NORTH": "Fresno",
+            "SOUTH": "Buenos_Aries"
+        }
+    },
+    'Buenos_Aries': {
+        'NAME': "Buenos Aries",
+        'DESCRIPTION': "Welcome to Buenos Aries! If you have watched the Netflix T.V. show Carmen San-Diego,"
+                       "then you know she was born here. There's lot to see and plenty of life in this city "
+                       "located in Argentina.",
+        'PATHS': {
+            'NORTH': "Belize",
+            'SOUTH': "Antarctica"
+        }
+    },
+    'Antarctica': {
+        'NAME': "Antarctica",
+        'DESCRIPTION': "How did you end up here? Oh well, now that your here you can freeze because it's winter time"
+                       "and it get's COLD. Also, tell the penguins and polar bears the Creator said hi. I should go "
+                       "back there sometime.",
+        'PATHS': {
+            "SOUTH": "Buenos_Aries"
+        }
+    },
+    'Split': {
+        'NAME': "Split",
+        'DESCRIPTION': "This city is located in a country called Croatia. Yes, the town is called Split. For those"
+                       "that have read the Heroes of Olympus series than you know the Temple of Jupiter lies here."
+                       "Some ambrosia in the corner of the temple that can only be seen by you.",
+        'PATHS': {
+            "NORTH": "London",
+            "EAST": "Great_Wall"
+        }
+    },
+    'Manhattan': {
+        'NAME': "Manhattan",
+        'DESCRIPTION': "This city is home of the infamous Percy Jackson. Near here is New York city. Yes, the big"
+                       "apple where the empire state building lies. There's many history here but you know that the"
+                       "Greek/Roman Gods live here. They offer you a sword.",
+        'PATHS': {
+            "WEST": "Fresno",
+            "EAST": "Venice"
+        }
+    },
+    'Ghana': {
+        'NAME': "Ghana",
+        'DESCRIPTION': "Welcome to Ghana. Currently and back in ancient times this was and is a trade center. Back"
+                       "then salts, spices, gold and other goods were traded. You have found a boat full of gold as "
+                       "well as valuable artifacts left behind by the ancient civilization.",
+        'PATHS': {
+            "EAST": "Belize",
+            "WEST": "Egypt"
+        }
+    },
+    'Cape_Town': {
+        'NAME': "Cape Town",
+        'DESCRIPTION': "You made it to Cape Town. Congrats. Well there's not much for you to find here but there is "
+                       "plenty of fine sights to see. You see a great many of well-known sights and go to different "
+                       "tourist attractions",
+        'PATHS': {
+            "NORTH": "Egypt"
+        }
+    },
+    'Egypt': {
+        'NAME': "Egypt",
+        'DESCRIPTION': "This marvelous country has ton of historic background that you should have learned about in"
+                       "history class. Hope you payed attention. There's ton of tombs to still be discovered. For "
+                       "example, Queen Nefertiti. You have just found it in a secret door inside King Tut's tomb",
+        'PATHS': {
+            "WEST": "Ghana",
+            "NORTH": "Rome",
+            "SOUTH": "Cape_Town"
+        }
+    },
+    'Rome': {
+        'NAME': "Rome",
+        'DESCRIPTION': "Welcome to Rome. This is the landmine of historical background.",
+        'PATHS': {
+
+        }
     }
 }
 
