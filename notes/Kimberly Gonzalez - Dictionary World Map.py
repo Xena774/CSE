@@ -62,7 +62,7 @@ world_map = {
                        "here talks with a posh accent.",
         'PATHS': {
             "WEST": "Pitt_Lake",
-            "EAST": "London"
+            "EAST": "Great_Wall",
         }
     },
     'Belize': {
@@ -100,8 +100,7 @@ world_map = {
                        "that have read the Heroes of Olympus series than you know the Temple of Jupiter lies here."
                        "Some ambrosia in the corner of the temple that can only be seen by you.",
         'PATHS': {
-            "NORTH": "London",
-            "EAST": "Great_Wall"
+            "NORTH": "London"
         }
     },
     'Manhattan': {
@@ -146,9 +145,65 @@ world_map = {
     },
     'Rome': {
         'NAME': "Rome",
-        'DESCRIPTION': "Welcome to Rome. This is the landmine of historical background.",
+        'DESCRIPTION': "Welcome to Rome. This is the landmine of historical background. There is so much history here"
+                       "that still has yet to be discovered. Rome has it's famous catacombs underneath the surface. "
+                       "Then, there is the Colosseum where gladiators and slaves fought. Here you found the rumored"
+                       "treasure of King Alaric form the famous Sack of Rome.",
         'PATHS': {
-
+            'SOUTH': "Egypt",
+            'NORTH': "Venice"
+        }
+    },
+    'Venice': {
+        'NAME': "Venice",
+        'DESCRIPTION': "Welcome to Venice! There is no treasure here. Sorry. But on the other hand you get to enjoy"
+                       "this beautiful city in Italy. You can go on a ride in one the canals, go shopping or eat a lot"
+                       "of delicious Italian food. And remember do not order pizza.",
+        'PATHS': {
+            'WEST': "Manhattan",
+            'EAST': "New_Delhi",
+            'NORTH': "Moscow",
+            'SOUTH': 'Rome'
+        }
+    },
+    'New_Delhi': {
+        'NAME': "New Delhi",
+        "DESCRIPTION": "Welcome to New Delhi! This is the capital of Indian adn is very populated. Here there is lots"
+                       "of history. History class has taught us a lot about what Indians believed about after life and"
+                       "resurrection. You have discovered a secret temple and managed to ge through the traps. There's"
+                       "piles of gold.",
+        'PATHS': {
+            'WEST': "Venice",
+            'SOUTH': "Australia",
+            'NORTH': "Great_Wall"
+        }
+    },
+    'Greece': {
+        'NAME': "Greece",
+        'DESCRIPTION': "Greece home of many things you see today in modern society. There is so much history here. "
+                       "The Pantheon and Mount Olympus. This is the home of many greek heroes. You have found the"
+                       "sword of Hercules and the spear of Achilles.",
+        'PATHS': {
+            'EAST': 'Rome'
+        }
+    },
+    'Great_Wall': {
+        'NAME': "Great Wall of China",
+        'DESCRIPTION': "The great wall has been around for forever and was a way to protect China. Although from Mulan"
+                       "we see that the plan didn't work. People managed to find ways to get through. A lot of people "
+                       "of people died in the making of this. There is no treasure here.",
+        'PATHS': {
+            'SOUTH': "New_Delhi",
+            'WEST': "Venice"
+        }
+    },
+    'Australia': {
+        'NAME': "Australia",
+        'DESCRIPTION': "Welcome to Australia! This place is beautiful and the accents are amazing. There's also"
+                       "the great surfing competitions that take place here. This place is also where multiple places "
+                       "sent their prisoners. You have found the lost gold reef. Congrats!",
+        'PATHS': {
+            "NORTH": "New_Delhi"
         }
     }
 }
