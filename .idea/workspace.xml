@@ -15,6 +15,7 @@
     <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Guess_Game.coverage" NAME="Kimberly Gonzalez - Guess Game Coverage Results" MODIFIED="1541206193127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Basic_Python_Notes.coverage" NAME="Basic Python Notes Coverage Results" MODIFIED="1547677401897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Hangman.coverage" NAME="Kimberly Gonzalez - Hangman Coverage Results" MODIFIED="1548886012273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$Object_Notes.coverage" NAME="Object Notes Coverage Results" MODIFIED="1550097401602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Semester_2_Notes.coverage" NAME="Semester 2 Notes Coverage Results" MODIFIED="1547071638441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -53,7 +54,7 @@
     <session id="1395652717">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.15" value="1" />
@@ -62,6 +63,7 @@
           <entry key="project.open.time.35" value="2" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.38" value="3" />
+          <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.40" value="2" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.44" value="1" />
@@ -72,27 +74,27 @@
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.88" value="1" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="12" />
+          <entry key="py" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="12" />
+          <entry key="Python" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="16901" />
+          <entry key="py" value="17447" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="16901" />
+          <entry key="Python" value="17447" />
         </counts>
       </usages-collector>
     </session>
@@ -111,7 +113,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Dictionary Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="714">
               <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
             </state>
           </provider>
@@ -120,7 +122,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Kimberly Gonzalez - Dictionary World Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1721">
+            <state relative-caret-position="3757">
               <caret line="221" column="38" selection-start-line="221" selection-start-column="38" selection-end-line="221" selection-end-column="38" />
             </state>
           </provider>
@@ -129,12 +131,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/Object Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="375">
+              <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
               <folding>
-                <marker date="1550011008466" expanded="true" signature="21:26" ph="..." />
-                <marker date="1550011008466" expanded="true" signature="429:430" ph="..." />
-                <marker date="1550011008466" expanded="true" signature="429:438" ph="..." />
+                <marker date="1550097401523" expanded="true" signature="45:50" ph="..." />
+                <marker date="1550097401523" expanded="true" signature="528:529" ph="..." />
+                <marker date="1550097401523" expanded="true" signature="528:541" ph="..." />
+                <marker date="1550097401523" expanded="true" signature="1157:1162" ph="..." />
+                <marker date="1550097401523" expanded="true" signature="1157:1451" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notes/Special_Random.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <marker date="1550097401414" expanded="true" signature="52:57" ph="..." />
               </folding>
             </state>
           </provider>
@@ -162,6 +178,7 @@
         <option value="$PROJECT_DIR$/notes/Kimberly Gonzalez - Hangman.py" />
         <option value="$PROJECT_DIR$/notes/Dictionary Notes.py" />
         <option value="$PROJECT_DIR$/notes/Kimberly Gonzalez - Dictionary World Map.py" />
+        <option value="$PROJECT_DIR$/notes/Special_Random.py" />
         <option value="$PROJECT_DIR$/notes/Object Notes.py" />
       </list>
     </option>
@@ -183,7 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,6 +216,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -221,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Kimberly Gonzalez - Dictionary World Map">
+  <component name="RunManager" selected="Python.Object Notes">
     <configuration name="Basic Python Notes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -310,7 +327,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Semester 2 Notes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Object Notes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -323,7 +340,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notes/Semester 2 Notes.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notes/Object Notes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -333,19 +350,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Semester 2 Notes" />
       <item itemvalue="Python.Kimberly Gonzalez - Hangman" />
       <item itemvalue="Python.Basic Python Notes" />
       <item itemvalue="Python.Dictionary Notes" />
       <item itemvalue="Python.Kimberly Gonzalez - Dictionary World Map" />
+      <item itemvalue="Python.Object Notes" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Object Notes" />
         <item itemvalue="Python.Kimberly Gonzalez - Dictionary World Map" />
         <item itemvalue="Python.Dictionary Notes" />
         <item itemvalue="Python.Kimberly Gonzalez - Hangman" />
         <item itemvalue="Python.Basic Python Notes" />
-        <item itemvalue="Python.Semester 2 Notes" />
       </list>
     </recent_temporary>
   </component>
@@ -366,7 +383,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3797277" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3857791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -433,26 +450,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Dictionary Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="714">
           <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Kimberly Gonzalez - Dictionary World Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1721">
+        <state relative-caret-position="3757">
           <caret line="221" column="38" selection-start-line="221" selection-start-column="38" selection-end-line="221" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes/Special_Random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <marker date="1550097401414" expanded="true" signature="52:57" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Object Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="375">
+          <caret line="56" column="22" lean-forward="true" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
           <folding>
-            <marker date="1550011008466" expanded="true" signature="21:26" ph="..." />
-            <marker date="1550011008466" expanded="true" signature="429:430" ph="..." />
-            <marker date="1550011008466" expanded="true" signature="429:438" ph="..." />
+            <marker date="1550097401523" expanded="true" signature="45:50" ph="..." />
+            <marker date="1550097401523" expanded="true" signature="528:529" ph="..." />
+            <marker date="1550097401523" expanded="true" signature="528:541" ph="..." />
+            <marker date="1550097401523" expanded="true" signature="1157:1162" ph="..." />
+            <marker date="1550097401523" expanded="true" signature="1157:1451" ph="..." />
           </folding>
         </state>
       </provider>
