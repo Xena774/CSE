@@ -1,3 +1,4 @@
+
 world_map = {
     'Fresno': {
         'NAME': "Fresno",
