@@ -92,7 +92,7 @@ world_map = {
                        "and it get's COLD. Also, tell the penguins and polar bears the Creator said hi. I should go "
                        "back there sometime.",
         'PATHS': {
-            "SOUTH": "Buenos_Aries"
+            "NORTH": "Buenos_Aries"
         }
     },
     'Split': {
