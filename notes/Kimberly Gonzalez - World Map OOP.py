@@ -1,3 +1,6 @@
+import random
+
+
 class Room(object):
     def __init__(self, name, description, north=None, south=None, east=None, west=None):
         self.name = name
@@ -6,6 +9,26 @@ class Room(object):
         self.south = south
         self.east = east
         self.west = west
+
+
+class Plato(object):
+    def __init__(self):
+        self.health = 100
+        self.description = "Here is Plato. A well-known Athenian philosopher. The founder of the Academy. Also, the" \
+                           "random spewer of good quotes."
+
+    def quotes(self):
+        chance = random.randint(1, 6)
+        chance_2 = random.randint(1, 6)
+        chosen = chance + chance_2
+        if chosen == 2:
+            print("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination,"
+                  " and charm and gaiety to life and to everything.")
+        elif chosen == 4:
+            print("Be kind, for everyone you meet is fighting a hard battle.")
+        elif chosen == 6:
+            print("Wise men talk because they have something to say; fools, because they have to say something.")
+            print("")
 
 
 class Player(object):
@@ -103,7 +126,7 @@ Rome = Room('Rome', "Welcome to Rome. This is the landmine of historical backgro
                     "treasure of King Alaric form the famous Sack of Rome.", "Venice", "Egypt")
 Venice = Room('Venice', "Welcome to Venice! There is no treasure here. Sorry. But on the other hand you get to enjoy"
                         "this beautiful city in Italy. You can go on a ride in one the canals, go shopping or eat a lot"
-                        "of delicious Italian food. And remember do not order pizza.", "Moscow", "Rome", "New_Delhi",
+                        "of delicious Italian food. And remember do not order pizza.", None, "Rome", "New_Delhi",
               "Manhattan")
 New_Delhi = Room('New Delhi', "Welcome to New Delhi! This is the capital of Indian adn is very populated. Here there is"
                               "lots of history. History class has taught us a lot about what Indians believed about"
@@ -131,6 +154,7 @@ print("Welcome to Around the World. In this game you travel to different places.
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
+
     command = input(">_")
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
