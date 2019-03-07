@@ -11,24 +11,31 @@ class Weapon(Item):
 
     def fight(self):
         self.own = True
-        print("You have defeated the enemy.")
+        print("You are fighting the enemy. Don't fail.")
+        if self.sword_life < 0:
+            self.own = False
+            print("NOOOOOOOOOO.You no longer have this sword.")
 
 
 class Armor(Item):
     def __init__(self, name, armor="steel"):
         super(Armor, self).__init__(name)
         self.own = False
-        self.sword_life = 100
+        self.armor_life = 100
         self.armor_type = armor
 
     def wear(self):
         self.own = True
         print("You are wearing %s armor." % self.armor_type)
+        if self.armor_life < 0:
+            self.own = False
+            print("NOOOOOOOOOO.You no longer have armour. :(")
 
 
 class Treasure(Item):
     def __init__(self, name):
         super(Treasure, self).__init__(name)
+        self.description = "It's valuable"
 
 
 class Sword(Weapon):
@@ -36,6 +43,7 @@ class Sword(Weapon):
         super(Sword, self).__init__(name)
         self.durability = 80
         self.attack_power = 30
+        self.description = "It's a nice sword"
 
 
 class Bow(Weapon):
@@ -61,34 +69,44 @@ class Pole(Weapon):
 
 class Achilles(Spear):
     def __init__(self):
-        super(Achilles, self).__init__("The spear used by Achilles.")
+        super(Achilles, self).__init__("Achilles")
+        self.description = "The spear used by Achilles."
 
 
 class CampHalfBlood(Armor):
     def __init__(self):
-        super(CampHalfBlood, self).__init__("This is the armour that is given at Camp Half-Blood.")
+        super(CampHalfBlood, self).__init__("CampHalfBlood")
+        self.description = "This is the armour that is given at Camp Half-Blood. it is made of celestial bronze"
 
 
 class CampJupiter(Armor):
     def __init__(self):
-        super(CampJupiter, self).__init__("Armour given in Camp Jupiter.")
+        super(CampJupiter, self).__init__("Camp Jupiter")
+        self.description = "This armour given in Camp Jupiter. It is made out of imperial gold."
 
 
 class OdysseusBow(Bow):
     def __init__(self):
-        super(OdysseusBow, self).__init__("This is the bow Odysseus used to kill Penelope's suitors. The original owner"
-                                          "was Eurytus, who was killed for challenging Apollo.")
+        super(OdysseusBow, self).__init__("OdysseusBow")
+        self.description = "This is the bow Odysseus used to kill Penelope's suitors. The original owner was Eurytus," \
+                           "who was killed for challenging Apollo."
 
 
 class Riptide(Sword):
     def __init__(self):
         super(Riptide, self).__init__("Riptide")
         self.attack_power = 50
+        self.description = "This is the sword used by the famous hero Percy Jackson, son of Posiden. This sword was" \
+                           " also owned by Hercules. Zoe Nightshade gave Hercules this sword. It appears as a pen but" \
+                           " uncap it and it's a sword"
 
 
 class Excalibur(Sword):
     def __init__(self):
         super(Excalibur, self).__init__("Excalibur")
+        self.description = "This sword was wielded by the legendary King Arthur. This is what made him a true king" \
+                           "and great leader of Camelot. If you watched the series Merlin, then you know all about" \
+                           "it. Or OUAT it's the bottom part of Rumpelstiltskin dagger."
 
 
 class Rhindon(Sword):
@@ -98,41 +116,50 @@ class Rhindon(Sword):
 
 class HerculesClub(Pole):
     def __init__(self):
-        super(HerculesClub, self).__init__("This is the club used by Hercules to do many of his labors needed to become"
-                                           "a God")
+        super(HerculesClub, self).__init__("HerculesClub")
+        self.description = "This is the pole used by Hercules. He used it when doing his labors to become a God." \
+                           " Nobody likes Hercules"
 
 
 class GoldMine(Treasure):
     def __init__(self):
-        super(GoldMine, self).__init__("Pitt Lake Gold Mine")
+        super(GoldMine, self).__init__("GoldMine")
+        self.description = "The Pitt Lake Gold Mine which has been a mystery for years."
 
 
 class Painting(Treasure):
     def __init__(self):
-        super(Painting, self).__init__("Nuuk Painting of Mother of the Sea")
+        super(Painting, self).__init__("Painting")
+        self.description = "This painting found is the Mother of the Sea."
 
 
 class Mayan(Treasure):
     def __init__(self):
-        super(Mayan, self).__init__("Rare Mayan artifacts worth millions or maybe even billions.")
+        super(Mayan, self).__init__("Mayan")
+        self.description = "Rare Mayan artifacts worth millions or maybe even billions."
 
 
 class Ambrosia(Treasure):
     def __init__(self):
-        super(Ambrosia, self).__init__("Ambrosia, food of the Gods")
+        super(Ambrosia, self).__init__("Ambrosia")
+        self.description = "Ambrosia, food of the Gods and healing qualities for demi-gods. Burns up mortals."
 
 
 class GoldBoat(Treasure):
     def __init__(self):
-        super(GoldBoat, self).__init__("The Golden Boat of Ghana")
+        super(GoldBoat, self).__init__("GoldBoat")
+        self.description = "The boat from ancient Ghana filled with gold"
 
 
 class QueenTomb(Treasure):
     def __init__(self):
-        super(QueenTomb, self).__init__("The tomb of the famous Egyptian ruler Nefertiti.")
+        super(QueenTomb, self).__init__("QueenTomb")
+        self.description = "The tomb of the famous Egyptian ruler Nefertiti. There is a bunch of treasure. I'm sure" \
+                           " she had a good afterlife."
 
 
 class GoldenReef(Treasure):
     def __init__(self):
-        super(GoldenReef, self).__init__("This is Lasseter's Reef of discovered by Harold Bell Lasseter in 1911 and"
-                                         "and 1930.")
+        super(GoldenReef, self).__init__("GoldenReef")
+        self.description = "You have traveled all over Australia and have found Lasseter's Reef of discovered by " \
+                           "Harold Bell Lasseter in 1911 and 1930."
