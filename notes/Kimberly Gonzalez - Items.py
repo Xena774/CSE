@@ -6,15 +6,6 @@ class Item(object):
 class Weapon(Item):
     def __init__(self, name):
         super(Weapon, self).__init__(name)
-        self.own = False
-        self.sword_life = 100
-
-    def fight(self):
-        self.own = True
-        print("You are fighting the enemy. Don't fail.")
-        if self.sword_life < 0:
-            self.own = False
-            print("NOOOOOOOOOO.You no longer have this sword.")
 
 
 class Armor(Item):
@@ -39,32 +30,68 @@ class Treasure(Item):
 
 
 class Sword(Weapon):
-    def __init__(self, name):
+    def __init__(self, name, sword="You don't have a sword."):
         super(Sword, self).__init__(name)
         self.durability = 80
         self.attack_power = 30
         self.description = "It's a nice sword"
+        self.own = True
+        self.sword_type = sword
+
+    def fight(self):
+        if self.own:
+            print("You are fighting the enemy with the sword, %s. Don't fail." % self.sword_type)
+            if self.durability < 0:
+                self.own = False
+                print("NOOOOOOOOOO.You no longer have this sword.")
 
 
 class Bow(Weapon):
-    def __init__(self, name):
+    def __init__(self, name, bow="You don't have a sword"):
         super(Bow, self).__init__(name)
         self.durability = 80
         self.attack_power = 15
+        self.bow_type = bow
+        self.own = False
+
+    def fight(self):
+        if self.own:
+            print("You are shooting the enemy, %s. Don't fail." % self.bow_type)
+            if self.durability < 0:
+                self.own = False
+                print("NOOOOOOOOOO.You no longer have this bow.")
 
 
 class Spear(Weapon):
-    def __init__(self, name):
+    def __init__(self, name, spear="You don't have one"):
         super(Spear, self).__init__(name)
         self.durability = 50
         self.attack_power = 30
+        self.own = False
+        self.spear_type = spear
+
+    def fight(self):
+        if self.own:
+            print("You are fighting the enemy, %s. Don't fail." % self.spear_type)
+            if self.durability < 0:
+                self.own = False
+                print("NOOOOOOOOOO.You no longer have this spear.")
 
 
 class Pole(Weapon):
-    def __init__(self, name):
+    def __init__(self, name, pole="You don't have one."):
         super(Pole, self).__init__(name)
         self.durability = 70
         self.attack_power = 15
+        self.own = False
+        self.pole_type = pole
+
+    def fight(self):
+        if self.own:
+            print("You are fighting the enemy with, %s. Don't fail." % self.pole_type)
+            if self.durability < 0:
+                self.own = False
+                print("NOOOOOOOOOO.You no longer have the pole weapon.")
 
 
 class Achilles(Spear):
