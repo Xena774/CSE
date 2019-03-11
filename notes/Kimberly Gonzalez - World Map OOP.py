@@ -18,17 +18,21 @@ class Plato(object):
                            "random spewer of good quotes."
 
     def quotes(self):
-        chance = random.randint(1, 6)
-        chance_2 = random.randint(1, 6)
-        chosen = chance + chance_2
-        if chosen == 2:
-            print("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination,"
-                  " and charm and gaiety to life and to everything.")
-        elif chosen == 4:
-            print("Be kind, for everyone you meet is fighting a hard battle.")
-        elif chosen == 6:
-            print("Wise men talk because they have something to say; fools, because they have to say something.")
-            print("")
+        q = input(">_")
+        if q.lower() in ["quote"]:
+            chance = random.randint(1, 6)
+            chance_2 = random.randint(1, 6)
+            chosen = chance + chance_2
+            if chosen == 2:
+                print("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the"
+                      " imagination, and charm and gaiety to life and to everything.")
+                print()
+            elif chosen == 4:
+                print("Be kind, for everyone you meet is fighting a hard battle.")
+                print()
+            elif chosen == 6:
+                print("Wise men talk because they have something to say; fools, because they have to say something.")
+                print("")
 
 
 class Player(object):
@@ -108,7 +112,8 @@ Split = Room("Split", "This city is located in a country called Croatia. Yes, th
                       "Some ambrosia in the corner of the temple that can only be seen by you.", "London")
 Manhattan = Room("Manhattan", "This city is home of the infamous Percy Jackson. Near here is New York city. Yes,the big"
                               "apple where the empire state building lies. There's many history here but you know that"
-                              "the Greek/Roman Gods live here. They offer you a sword.", None, None, "Venice", "Fresno")
+                              "the Greek/Roman Gods live here. They offer you a sword and armor.", None, None, "Venice",
+                 "Fresno")
 Ghana = Room("Ghana", "Welcome to Ghana. Currently and back in ancient times this was and is a trade center. Back"
                       "then salts, spices, gold and other goods were traded. You have found a boat full of gold as "
                       "well as valuable artifacts left behind by the ancient civilization.", None, None, "Belize",
@@ -145,7 +150,7 @@ Australia = Room("Australia", "Welcome to Australia! This place is beautiful and
 
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 playing = True
-player = Player(Fresno)
+player = Player(Manhattan)
 print("Welcome to Around the World. In this game you travel to different places. Sometimes it's a city, country,"
       "state. The goal is to collect things in different places of the world. You have to collect every treasure to"
       " win the game. Good luck!")

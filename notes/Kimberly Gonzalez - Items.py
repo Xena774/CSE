@@ -9,7 +9,7 @@ class Weapon(Item):
 
 
 class Armor(Item):
-    def __init__(self, name, armor="steel"):
+    def __init__(self, name, armor=None):
         super(Armor, self).__init__(name)
         self.own = False
         self.armor_life = 100
@@ -30,7 +30,7 @@ class Treasure(Item):
 
 
 class Sword(Weapon):
-    def __init__(self, name, sword="You don't have a sword."):
+    def __init__(self, name, sword=None):
         super(Sword, self).__init__(name)
         self.durability = 80
         self.attack_power = 30
@@ -47,7 +47,7 @@ class Sword(Weapon):
 
 
 class Bow(Weapon):
-    def __init__(self, name, bow="You don't have a sword"):
+    def __init__(self, name, bow=None):
         super(Bow, self).__init__(name)
         self.durability = 80
         self.attack_power = 15
@@ -63,7 +63,7 @@ class Bow(Weapon):
 
 
 class Spear(Weapon):
-    def __init__(self, name, spear="You don't have one"):
+    def __init__(self, name, spear=None):
         super(Spear, self).__init__(name)
         self.durability = 50
         self.attack_power = 30
@@ -79,7 +79,7 @@ class Spear(Weapon):
 
 
 class Pole(Weapon):
-    def __init__(self, name, pole="You don't have one."):
+    def __init__(self, name, pole=None):
         super(Pole, self).__init__(name)
         self.durability = 70
         self.attack_power = 15
@@ -103,13 +103,13 @@ class Achilles(Spear):
 class CampHalfBlood(Armor):
     def __init__(self):
         super(CampHalfBlood, self).__init__("CampHalfBlood")
-        self.description = "This is the armour that is given at Camp Half-Blood. it is made of celestial bronze"
+        self.description = "This is the armor that is given at Camp Half-Blood. It is made out of celestial bronze."
 
 
 class CampJupiter(Armor):
     def __init__(self):
-        super(CampJupiter, self).__init__("Camp Jupiter")
-        self.description = "This armour given in Camp Jupiter. It is made out of imperial gold."
+        super(CampJupiter, self).__init__("CampJupiter")
+        self.description = "This armor given in Camp Jupiter. It is made out of imperial gold."
 
 
 class OdysseusBow(Bow):
@@ -133,7 +133,7 @@ class Excalibur(Sword):
         super(Excalibur, self).__init__("Excalibur")
         self.description = "This sword was wielded by the legendary King Arthur. This is what made him a true king" \
                            "and great leader of Camelot. If you watched the series Merlin, then you know all about" \
-                           "it. Or OUAT it's the bottom part of Rumpelstiltskin dagger."
+                           "it. 'Or Once Upon a Time' it's the bottom part of Rumpelstiltskin dagger."
 
 
 class Rhindon(Sword):
