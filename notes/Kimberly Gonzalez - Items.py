@@ -190,3 +190,20 @@ class GoldenReef(Treasure):
         super(GoldenReef, self).__init__("GoldenReef")
         self.description = "You have traveled all over Australia and have found Lasseter's Reef of discovered by " \
                            "Harold Bell Lasseter in 1911 and 1930."
+
+
+golden_reef = GoldenReef()
+queen_tomb = QueenTomb()
+gold_boat = GoldBoat
+ambrosia = Ambrosia
+mayan_artifacts = Mayan
+nuuk_painting = Painting
+gold_mine = GoldMine
+hercules_club = HerculesClub
+rhindon = Rhindon
+excalibur = Excalibur
+riptide = Riptide
+odysseus_bow = OdysseusBow
+achilles_spear = Achilles
+camp_jupiter_armor = CampJupiter
+camp_half_blood_armor = CampHalfBlood
