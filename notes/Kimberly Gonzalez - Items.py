@@ -9,10 +9,10 @@ class Weapon(Item):
 
 
 class Armor(Item):
-    def __init__(self, name, armor=None):
+    def __init__(self, name, life=100, armor=None):
         super(Armor, self).__init__(name)
         self.own = False
-        self.armor_life = 100
+        self.armor_life = life
         self.armor_type = armor
 
     def wear(self):
@@ -30,13 +30,13 @@ class Treasure(Item):
 
 
 class Sword(Weapon):
-    def __init__(self, name, sword=None):
+    def __init__(self, name, attack=30,):
         super(Sword, self).__init__(name)
         self.durability = 80
-        self.attack_power = 30
+        self.attack_power = attack
         self.description = "It's a nice sword"
         self.own = True
-        self.sword_type = sword
+        self.sword_type = "generic"
 
     def fight(self):
         if self.own:
@@ -47,10 +47,10 @@ class Sword(Weapon):
 
 
 class Bow(Weapon):
-    def __init__(self, name, bow=None):
+    def __init__(self, name, power=30, bow=None):
         super(Bow, self).__init__(name)
         self.durability = 80
-        self.attack_power = 15
+        self.attack_power = power
         self.bow_type = bow
         self.own = False
 
@@ -63,10 +63,10 @@ class Bow(Weapon):
 
 
 class Spear(Weapon):
-    def __init__(self, name, spear=None):
+    def __init__(self, name, power=30, spear=None):
         super(Spear, self).__init__(name)
         self.durability = 50
-        self.attack_power = 30
+        self.attack_power = power
         self.own = False
         self.spear_type = spear
 
@@ -79,10 +79,10 @@ class Spear(Weapon):
 
 
 class Pole(Weapon):
-    def __init__(self, name, pole=None):
+    def __init__(self, name, power=30, pole=None):
         super(Pole, self).__init__(name)
         self.durability = 70
-        self.attack_power = 15
+        self.attack_power = power
         self.own = False
         self.pole_type = pole
 
@@ -192,6 +192,28 @@ class GoldenReef(Treasure):
                            "Harold Bell Lasseter in 1911 and 1930."
 
 
+class Character(object):
+    def __init__(self, name, health, weapon, armor):
+        self.name = name
+        self.health = health
+        self.weapon = weapon
+        self.armor = armor
+
+    def take_damage(self, damage):
+        if damage < self.armor.armor_life:
+            print("No damage is done because of some FABULOUS armor!")
+        else:
+            self.health -= damage - self.armor.armor_life
+            if self.health < 0:
+                self.health = 0
+                print("%s has fallen" % self.name)
+        print("%s has %d health left" % (self.name, self.health))
+
+    def attack(self, target):
+        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
+
+
 golden_reef = GoldenReef()
 queen_tomb = QueenTomb()
 gold_boat = GoldBoat
@@ -207,3 +229,17 @@ odysseus_bow = OdysseusBow
 achilles_spear = Achilles
 camp_jupiter_armor = CampJupiter
 camp_half_blood_armor = CampHalfBlood
+
+# Items
+sword = Weapon("Sword")
+canoe = Weapon("Canoe")
+wiebe_armor = Armor("Armor of the Gods")
+
+# Characters
+orc = Character("Orc", 100, sword, Armor("Generic Armor", 2))
+wiebe = Character("Wiebe", 1000000000, canoe, wiebe_armor)
+
+orc.attack(wiebe)
+wiebe.attack(orc)
+wiebe.attack(orc)
+
