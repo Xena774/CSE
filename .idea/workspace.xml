@@ -16,9 +16,9 @@
     <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Mad_Lib.coverage" NAME="Kimberly Gonzalez - Mad Lib Coverage Results" MODIFIED="1540872389155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Hangman.coverage" NAME="Kimberly Gonzalez - Hangman Coverage Results" MODIFIED="1548886012273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$World_Map_OOP.coverage" NAME="World Map OOP Coverage Results" MODIFIED="1550701135145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___World_Map_OOP.coverage" NAME="Kimberly Gonzalez - World Map OOP Coverage Results" MODIFIED="1551306898005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___World_Map_OOP.coverage" NAME="Kimberly Gonzalez - World Map OOP Coverage Results" MODIFIED="1552598698186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Guess_Game.coverage" NAME="Kimberly Gonzalez - Guess Game Coverage Results" MODIFIED="1541206193127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Items.coverage" NAME="Kimberly Gonzalez - Items Coverage Results" MODIFIED="1552513122724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Items.coverage" NAME="Kimberly Gonzalez - Items Coverage Results" MODIFIED="1552597421393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Basic_Python_Notes.coverage" NAME="Basic Python Notes Coverage Results" MODIFIED="1547677401897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Object_Notes.coverage" NAME="Object Notes Coverage Results" MODIFIED="1550097401602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Semester_2_Notes.coverage" NAME="Semester 2 Notes Coverage Results" MODIFIED="1547071638441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
@@ -59,7 +59,7 @@
     <session id="1395652717">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="42" />
+          <entry key="project.closed" value="43" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.15" value="2" />
@@ -76,6 +76,7 @@
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.44" value="4" />
           <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.51" value="1" />
@@ -88,29 +89,29 @@
           <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.88" value="1" />
-          <entry key="project.opened" value="43" />
+          <entry key="project.opened" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="31" />
+          <entry key="py" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="31" />
+          <entry key="Python" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="22" />
-          <entry key="py" value="29739" />
+          <entry key="py" value="30078" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="22" />
-          <entry key="Python" value="29739" />
+          <entry key="Python" value="30078" />
         </counts>
       </usages-collector>
     </session>
@@ -129,13 +130,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Kimberly Gonzalez - World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="578">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
               <folding>
-                <marker date="1552340011623" expanded="true" signature="35:40" ph="..." />
-                <marker date="1552340011623" expanded="true" signature="315:1313" ph="..." />
-                <marker date="1552340011623" expanded="true" signature="1334:2063" ph="..." />
-                <marker date="1552340011623" expanded="true" signature="2061:2063" ph="..." />
+                <marker date="1552598974876" expanded="true" signature="35:40" ph="..." />
+                <marker date="1552598974876" expanded="true" signature="292:295" ph="..." />
+                <marker date="1552598974876" expanded="true" signature="316:1909" ph="..." />
+                <marker date="1552598974876" expanded="true" signature="1907:1909" ph="..." />
               </folding>
             </state>
           </provider>
@@ -159,29 +160,38 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/Kimberly Gonzalez - Items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
+            <state relative-caret-position="170">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
-                <marker date="1552512961176" expanded="true" signature="19:24" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="96:101" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="626:747" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="767:772" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="820:825" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="2315:2800" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="3417:3690" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="3711:3716" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="4137:4142" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="4577:4582" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="4678:4932" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="4957:4962" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="5324:5329" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="5510:5515" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="5724:5729" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="5902:5907" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="6184:6189" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="6475:7214" ph="..." />
-                <marker date="1552512961176" expanded="true" signature="7588:7597" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="19:24" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="96:101" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="651:772" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="792:797" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="834:839" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="1793:2006" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="2623:2896" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="2917:2922" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="3343:3348" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="3783:3788" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="3884:4138" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="4163:4168" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="4530:4535" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="4716:4721" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="4930:4935" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="5108:5113" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="5390:5395" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="5655:5657" ph="..." />
+                <marker date="1552597778548" expanded="true" signature="6058:6059" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notes/fight.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -251,8 +261,9 @@
         <option value="$PROJECT_DIR$/notes/Kimberly Gonzalez - Dictionary World Map.py" />
         <option value="$PROJECT_DIR$/notes/World Map OOP.py" />
         <option value="$PROJECT_DIR$/notes/Inheritance.py" />
-        <option value="$PROJECT_DIR$/notes/Kimberly Gonzalez - World Map OOP.py" />
+        <option value="$PROJECT_DIR$/notes/fight.py" />
         <option value="$PROJECT_DIR$/notes/Kimberly Gonzalez - Items.py" />
+        <option value="$PROJECT_DIR$/notes/Kimberly Gonzalez - World Map OOP.py" />
       </list>
     </option>
   </component>
@@ -311,7 +322,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Kimberly Gonzalez - Items">
+  <component name="RunManager" selected="Python.Kimberly Gonzalez - World Map OOP">
     <configuration name="Inheritance" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -431,9 +442,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Kimberly Gonzalez - World Map OOP" />
         <item itemvalue="Python.Kimberly Gonzalez - Items" />
         <item itemvalue="Python.Inheritance" />
-        <item itemvalue="Python.Kimberly Gonzalez - World Map OOP" />
         <item itemvalue="Python.World Map OOP" />
         <item itemvalue="Python.Kimberly Gonzalez - Object" />
       </list>
@@ -456,7 +467,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36384267" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3698941" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -577,43 +588,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/notes/fight.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/notes/Kimberly Gonzalez - World Map OOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="578">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
           <folding>
-            <marker date="1552340011623" expanded="true" signature="35:40" ph="..." />
-            <marker date="1552340011623" expanded="true" signature="315:1313" ph="..." />
-            <marker date="1552340011623" expanded="true" signature="1334:2063" ph="..." />
-            <marker date="1552340011623" expanded="true" signature="2061:2063" ph="..." />
+            <marker date="1552598974876" expanded="true" signature="35:40" ph="..." />
+            <marker date="1552598974876" expanded="true" signature="292:295" ph="..." />
+            <marker date="1552598974876" expanded="true" signature="316:1909" ph="..." />
+            <marker date="1552598974876" expanded="true" signature="1907:1909" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Kimberly Gonzalez - Items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
+        <state relative-caret-position="170">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           <folding>
-            <marker date="1552512961176" expanded="true" signature="19:24" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="96:101" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="626:747" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="767:772" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="820:825" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="2315:2800" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="3417:3690" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="3711:3716" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="4137:4142" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="4577:4582" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="4678:4932" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="4957:4962" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="5324:5329" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="5510:5515" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="5724:5729" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="5902:5907" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="6184:6189" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="6475:7214" ph="..." />
-            <marker date="1552512961176" expanded="true" signature="7588:7597" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="19:24" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="96:101" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="651:772" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="792:797" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="834:839" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="1793:2006" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="2623:2896" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="2917:2922" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="3343:3348" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="3783:3788" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="3884:4138" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="4163:4168" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="4530:4535" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="4716:4721" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="4930:4935" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="5108:5113" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="5390:5395" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="5655:5657" ph="..." />
+            <marker date="1552597778548" expanded="true" signature="6058:6059" ph="..." />
           </folding>
         </state>
       </provider>

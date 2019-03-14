@@ -6,6 +6,7 @@ class Item(object):
 class Weapon(Item):
     def __init__(self, name):
         super(Weapon, self).__init__(name)
+        self.damage = 30
 
 
 class Armor(Item):
@@ -33,7 +34,7 @@ class Sword(Weapon):
     def __init__(self, name, attack=30,):
         super(Sword, self).__init__(name)
         self.durability = 80
-        self.attack_power = attack
+        self.damage = attack
         self.description = "It's a nice sword"
         self.own = True
         self.sword_type = "generic"
@@ -50,32 +51,18 @@ class Bow(Weapon):
     def __init__(self, name, power=30, bow=None):
         super(Bow, self).__init__(name)
         self.durability = 80
-        self.attack_power = power
+        self.damage = power
         self.bow_type = bow
         self.own = False
-
-    def fight(self):
-        if self.own:
-            print("You are shooting the enemy, %s. Don't fail." % self.bow_type)
-            if self.durability < 0:
-                self.own = False
-                print("NOOOOOOOOOO.You no longer have this bow.")
 
 
 class Spear(Weapon):
     def __init__(self, name, power=30, spear=None):
         super(Spear, self).__init__(name)
         self.durability = 50
-        self.attack_power = power
+        self.damage = power
         self.own = False
         self.spear_type = spear
-
-    def fight(self):
-        if self.own:
-            print("You are fighting the enemy, %s. Don't fail." % self.spear_type)
-            if self.durability < 0:
-                self.own = False
-                print("NOOOOOOOOOO.You no longer have this spear.")
 
 
 class Pole(Weapon):
@@ -85,13 +72,6 @@ class Pole(Weapon):
         self.attack_power = power
         self.own = False
         self.pole_type = pole
-
-    def fight(self):
-        if self.own:
-            print("You are fighting the enemy with, %s. Don't fail." % self.pole_type)
-            if self.durability < 0:
-                self.own = False
-                print("NOOOOOOOOOO.You no longer have the pole weapon.")
 
 
 class Achilles(Spear):
@@ -192,6 +172,23 @@ class GoldenReef(Treasure):
                            "Harold Bell Lasseter in 1911 and 1930."
 
 
+golden_reef = GoldenReef()
+queen_tomb = QueenTomb()
+gold_boat = GoldBoat()
+ambrosia = Ambrosia()
+mayan_artifacts = Mayan()
+nuuk_painting = Painting()
+gold_mine = GoldMine()
+hercules_club = HerculesClub()
+rhindon = Rhindon()
+excalibur = Excalibur()
+riptide = Riptide()
+odysseus_bow = OdysseusBow()
+achilles_spear = Achilles()
+camp_jupiter_armor = CampJupiter()
+camp_half_blood_armor = CampHalfBlood()
+
+
 class Character(object):
     def __init__(self, name, health, weapon, armor):
         self.name = name
@@ -214,32 +211,15 @@ class Character(object):
         target.take_damage(self.weapon.damage)
 
 
-golden_reef = GoldenReef()
-queen_tomb = QueenTomb()
-gold_boat = GoldBoat
-ambrosia = Ambrosia
-mayan_artifacts = Mayan
-nuuk_painting = Painting
-gold_mine = GoldMine
-hercules_club = HerculesClub
-rhindon = Rhindon
-excalibur = Excalibur
-riptide = Riptide
-odysseus_bow = OdysseusBow
-achilles_spear = Achilles
-camp_jupiter_armor = CampJupiter
-camp_half_blood_armor = CampHalfBlood
-
 # Items
 sword = Weapon("Sword")
 canoe = Weapon("Canoe")
 wiebe_armor = Armor("Armor of the Gods")
 
 # Characters
-orc = Character("Orc", 100, sword, Armor("Generic Armor", 2))
+orc = Character("Orc", 10, sword, Armor("Generic Armor", 2))
 wiebe = Character("Wiebe", 1000000000, canoe, wiebe_armor)
 
 orc.attack(wiebe)
 wiebe.attack(orc)
 wiebe.attack(orc)
-
