@@ -40,19 +40,63 @@ class Bard(object):
         self.description = "Here is a bard or a random spewer of quotes that many people don't understand."
 
     def quotes(self):
-        q = input(">_")
-        if q.lower() in ["quote"]:
-            chance = random.randint(1, 6)
-            if chance == 2:
-                print("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the"
-                      " imagination, and charm and gaiety to life and to everything.")
-                print()
-            elif chance == 4:
-                print("Be kind, for everyone you meet is fighting a hard battle.")
-                print()
-            elif chance == 6:
-                print("Wise men talk because they have something to say; fools, because they have to say something.")
-                print("")
+        chance = random.randint(1, 6)
+        if chance == 1:
+            print("Life without experience and sufferings is not life.")
+            print()
+        elif chance == 2:
+            print("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the"
+                  " imagination, and charm and gaiety to life and to everything.")
+            print()
+        elif chance == 3:
+            print("Whenever you find yourself on the side of the majority, it is time to pause and reflect.")
+            print()
+        elif chance == 4:
+            print("Be kind, for everyone you meet is fighting a hard battle.")
+            print()
+        elif chance == 5:
+            print("Every heart sings a song, incomplete, until another heart whispers back . Those who wish to sing"
+                  " always find a song.")
+        elif chance == 6:
+            print("Wise men talk because they have something to say; fools, because they have to say something.")
+            print("")
+
+
+class Enemy(object):
+    def __init__(self, name, health, weapon, armor):
+        self.name = name
+        self.health = health
+        self.weapon = weapon
+        self.armor = armor
+
+    def take_damage(self, damage):
+        if damage < self.armor.armor_life:
+            print("No damage is done because of some FABULOUS armor!")
+        else:
+            self.health -= damage - self.armor.armor_life
+            if self.health < 0:
+                self.health = 0
+                print("%s has fallen" % self.name)
+        print("%s has %d health left" % (self.name, self.health))
+
+    def attack(self, target):
+        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
+
+
+class Mummy(Enemy):
+    def __init__(self):
+        super(Mummy, self).__init__("Mummy", 100, "MummyStaff", None)
+
+
+class Gladiator(Enemy):
+    def __init__(self):
+        super(Gladiator, self).__init__("Gladiator", 100, "imperial", "camp_jupiter_armor")
+
+
+class Hydra(Enemy):
+    def __init__(self):
+        super(Hydra, self).__init__("Hydra", 1000, "Hydra_Poison", None)
 
 
 # These are the instances of the room(Instantiation)
@@ -82,7 +126,7 @@ Pitt_Lake = Room("Pitt Lake", "This lake is located in the lower mainland of Bri
 Alaska = Room("Alaska", "Welcome to Alaska. The largest state in the United States of America or 'merica. Here we have"
                         "the infamous dog-sled races that go from Anchorage to Nome. There is ton of open spaces,"
                         "mountains, and forests. You enjoy all the nice sites. There's not much here for you to"
-                        "discover. Move on.", None, None, "Pitt_Lake")
+                        "discover. There is nothing but a Hydra here for you to fight.", None, None, "Pitt_Lake")
 Oahu = Room("Oahu", "Oahu is part of the Hawaiian islands and contains the capital of Hawaii which is Honolulu. Oahu"
                     "is the place to go if you ever need a vacation in the islands. There's plenty to see and of "
                     "beaches. In this island is where the Attack on Pearl Harbor occurred on the morning of December"
@@ -120,12 +164,14 @@ Cape_Town = Room("Cape Town", "You made it to Cape Town. Congrats. Well there's 
                  "tourist attractions", "Egypt")
 Egypt = Room("Egypt", "This marvelous country has ton of historic background that you should have learned about in"
                       "history class. Hope you payed attention. There's ton of tombs to still be discovered. For "
-                      "example, Queen Nefertiti. You have just found it in a secret door inside King Tut's tomb",
+                      "example, Queen Nefertiti. You have just found it in a secret door inside King Tut's tomb. But a"
+                      "mummy is in there.",
              "Rome", "Cape_Town", None, 'Ghana')
 Rome = Room('Rome', "Welcome to Rome. This is the landmine of historical background. There is so much history here"
                     "that still has yet to be discovered. Rome has it's famous catacombs underneath the surface. "
-                    "Then, there is the Colosseum where gladiators and slaves fought. Here you found the rumored"
-                    "treasure of King Alaric form the famous Sack of Rome.", "Venice", "Egypt")
+                    "Then, there is the Colosseum where gladiators and slaves fought. Here there is the rumored"
+                    "treasure of King Alaric form the famous Sack of Rome. A roman gladiator is here"
+                    "left to protect Rome. Fight him for the glory of Rome and the treasure.", "Venice", "Egypt")
 Venice = Room('Venice', "Welcome to Venice! There is no treasure here. Sorry. But on the other hand you get to enjoy"
                         "this beautiful city in Italy. You can go on a ride in one the canals, go shopping or eat a lot"
                         "of delicious Italian food. And remember do not order pizza.", None, "Rome", "New_Delhi",

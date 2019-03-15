@@ -121,11 +121,29 @@ class Rhindon(Sword):
         super(Rhindon, self).__init__("Rhindon")
 
 
+class Imperial(Sword):
+    def __init__(self):
+        super(Imperial, self).__init__("Imperial")
+        self.description = "This sword is made out of Imperial Gold. It like the weapons that Camp Jupiter uses."
+
+
 class HerculesClub(Pole):
     def __init__(self):
         super(HerculesClub, self).__init__("HerculesClub")
         self.description = "This is the pole used by Hercules. He used it when doing his labors to become a God." \
                            " Nobody likes Hercules"
+
+
+class MummyStaff(Pole):
+    def __init__(self):
+        super(MummyStaff, self).__init__("MummyStaff")
+        self.description = "The Mummy owns a staff that has magical powers. It has the power of Anubis."
+
+
+class Poison(Weapon):
+    def __init__(self):
+        super(Poison, self).__init__("Poison")
+        self.damage = 80
 
 
 class GoldMine(Treasure):
@@ -187,6 +205,9 @@ odysseus_bow = OdysseusBow()
 achilles_spear = Achilles()
 camp_jupiter_armor = CampJupiter()
 camp_half_blood_armor = CampHalfBlood()
+imperial = Imperial()
+mummies_staff = MummyStaff
+Hydra_Poison = Poison
 
 
 class Character(object):
