@@ -206,8 +206,8 @@ achilles_spear = Achilles()
 camp_jupiter_armor = CampJupiter()
 camp_half_blood_armor = CampHalfBlood()
 imperial = Imperial()
-mummies_staff = MummyStaff
-Hydra_Poison = Poison
+mummies_staff = MummyStaff()
+Hydra_Poison = Poison()
 
 
 class Character(object):
