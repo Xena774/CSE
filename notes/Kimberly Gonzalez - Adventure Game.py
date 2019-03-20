@@ -205,31 +205,6 @@ class Room(object):
         self.item = item
 
 
-class Player(object):
-    def __init__(self, starting_location, weapon=[], armor=None):
-        self.health = 100
-        self.inventory = []
-        self.current_location = starting_location
-        self.weapon = weapon
-        self.armor = armor
-
-    def move(self, new_location):
-        """This method moves a player to a new location
-
-        :param new_location: The room object that we move to
-        """
-        self.current_location = new_location
-
-    def find_room(self, direction):
-        """This method takes a direction, and finds the variable of the room.
-
-        :param direction: A String (all lowercase), with a cardinal direction
-        :return: A room object if it exists, None if it does not
-        """
-        room_name = getattr(self.current_location, direction)
-        return globals()[room_name]
-
-
 golden_reef = GoldenReef()
 queen_tomb = QueenTomb()
 gold_boat = GoldBoat()
@@ -358,7 +333,8 @@ Split = Room("Split", "This city is located in a country called Croatia. Yes, th
              None, None, [ambrosia])
 Manhattan = Room("Manhattan", "This city is home of the infamous Percy Jackson. Near here is New York city. Yes, the"
                               "big apple where the empire state building lies. There's many history here but you know"
-                              " that the Greek/Roman Gods live here. You already ", None, None, "Venice", "Fresno")
+                              " that the Greek/Roman Gods live here. You already have weapons and armor", None, None,
+                 "Venice", "Fresno")
 Ghana = Room("Ghana", "Welcome to Ghana. Currently and back in ancient times this was and is a trade center. Back"
                       "then salts, spices, gold and other goods were traded. You have found a boat full of gold as "
                       "well as valuable artifacts left behind by the ancient civilization.", None, None, "Belize",
@@ -380,10 +356,10 @@ Venice = Room('Venice', "Welcome to Venice! There is no treasure here. Sorry. Bu
                         "this beautiful city in Italy. You can go on a ride in one the canals, go shopping or eat a lot"
                         "of delicious Italian food. And remember do not order pizza.", None, "Rome", "New_Delhi",
               "Manhattan")
-New_Delhi = Room('New Delhi', "Welcome to New Delhi! This is the capital of Indian adn is very populated. Here there is"
+New_Delhi = Room('New Delhi', "Welcome to New Delhi! This is the capital of Indian and is very populated. Here there is"
                               "lots of history. History class has taught us a lot about what Indians believed about"
-                              "after life and resurrection. You have discovered a secret temple and managed to get "
-                              "through the traps. There's piles of gold.", "Great_Wall", "Australia", None, "Venice")
+                              "after life and resurrection. I wonder what I'll be in the next life but I hope it's"
+                              " good", "Great_Wall", "Australia", None, "Venice")
 Greece = Room("Greece", "Greece home of many things you see today in modern society. There is so much history here. "
                         "The Pantheon and Mount Olympus. This is the home of many greek heroes. You have found the"
                         "club of Hercules and the spear of Achilles.", None, None, "Rome", None, None, [achilles_spear,
@@ -397,9 +373,36 @@ Australia = Room("Australia", "Welcome to Australia! This place is beautiful and
                  "sent their prisoners. You have found the lost gold reef. Congrats!", "New_Delhi", None, None, None,
                  None, [golden_reef])
 
+
+class Player(object):
+    def __init__(self, starting_location, weapon=[]):
+        self.health = 100
+        self.inventory = []
+        self.current_location = starting_location
+        self.weapon = weapon
+        self.armor = camp_half_blood_armor
+
+    def move(self, new_location):
+        """This method moves a player to a new location
+
+        :param new_location: The room object that we move to
+        """
+        self.current_location = new_location
+
+    def find_room(self, direction):
+        """This method takes a direction, and finds the variable of the room.
+
+        :param direction: A String (all lowercase), with a cardinal direction
+        :return: A room object if it exists, None if it does not
+        """
+        room_name = getattr(self.current_location, direction)
+        return globals()[room_name]
+
+
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 playing = True
-player = Player(Manhattan, [rhindon, riptide, odysseus_bow], camp_half_blood_armor)
+player = Player(Manhattan)
+
 print("Welcome to Around the World. In this game you travel to different places. Sometimes it's a city, country,"
       "state. The goal is to collect things in different places of the world. You have to collect every treasure to"
       " win the game. You are have Camp Half-Blood armor and are armed with the swords Rhindon, Riptide("
@@ -409,8 +412,14 @@ print("Welcome to Around the World. In this game you travel to different places.
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
-    if player.current_location.item is not None:
-        print(player.current_location.item.name)
+    if len(player.current_location.item) > 0:
+        print()
+        print("There are the following items in the room:")
+        for num, current_item in enumerate(player.current_location.item):
+            print(str(num + 1) + ": ", end="")
+            print(current_item.name + " - ", end="")
+            print(current_item.description)
+        print()
     command = input(">_")
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
