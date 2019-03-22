@@ -262,7 +262,7 @@ class Enemy(object):
 
     def take_damage(self, damage):
         if damage < self.armor.armor_life:
-            print("No damage is done because of some FABULOUS armor!")
+            print("Your not taking any health. It's armor is strong be stronger.")
         else:
             self.health -= damage - self.armor.armor_life
             if self.health < 0:
@@ -282,7 +282,7 @@ class Mummy(Enemy):
 
 class Gladiator(Enemy):
     def __init__(self):
-        super(Gladiator, self).__init__("Gladiator", 100, imperial, CampJupiter)
+        super(Gladiator, self).__init__("Gladiator", 100, imperial, camp_jupiter_armor)
 
 
 class Hydra(Enemy):
@@ -317,7 +317,7 @@ London = Room('London', "Welcome to London. Located in the United Kingdom and tr
                         "plenty to see and is the ultimate location spot for many. Don't you just love it. Everybody "
                         "here talks with a posh accent. You travel around Europe some more and you manage to find"
                         "Excalibur. You don't become king but still pick it up.", None, None, "Great_Wall", "Pitt_Lake",
-              None, [Excalibur])
+              None, [excalibur])
 Belize = Room('Belize', "Welcome to Belize. This country is located in South America. Here you can find some temples"
                         "from when the Mayans lived here. You have found some artifacts that have been left behind "
                         "by the Mayans", "Fresno", "Buenos_Aries", None, None, None, [mayan_artifacts])
@@ -331,7 +331,7 @@ Split = Room("Split", "This city is located in a country called Croatia. Yes, th
                       "that have read the Heroes of Olympus series than you know the Temple of Jupiter lies here."
                       "Some ambrosia in the corner of the temple that can only be seen by you.", "London", None, None,
              None, None, [ambrosia])
-Manhattan = Room("Manhattan", "This city is home of the infamous Percy Jackson. Near here is New York city. Yes, the"
+Manhattan = Room("Manhattan", "This city is home of the infamous Percy Jackson. Near here is New York city. Yes, the "
                               "big apple where the empire state building lies. There's many history here but you know"
                               " that the Greek/Roman Gods live here. You already have weapons and armor", None, None,
                  "Venice", "Fresno")
@@ -401,17 +401,18 @@ class Player(object):
 
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 playing = True
-player = Player(Manhattan)
+player = Player(Manhattan, [riptide, rhindon, odysseus_bow])
 
 print("Welcome to Around the World. In this game you travel to different places. Sometimes it's a city, country,"
       "state. The goal is to collect things in different places of the world. You have to collect every treasure to"
       " win the game. You are have Camp Half-Blood armor and are armed with the swords Rhindon, Riptide("
-      "Given to you by Percy as good luck and for emergencies), and Odysseus's bow. Good luck!")
+      "Given to you by Percy for good luck and for emergencies), and Odysseus's bow. Good luck!")
 
 # Controller
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
+    print()
     if len(player.current_location.item) > 0:
         print()
         print("There are the following items in the room:")
@@ -421,6 +422,7 @@ while playing:
             print(current_item.description)
         print()
     command = input(">_")
+    print()
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command in directions:
