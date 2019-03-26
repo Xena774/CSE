@@ -193,6 +193,11 @@ class GoldenReef(Treasure):
                            "Harold Bell Lasseter in 1911 and 1930."
 
 
+class Inventory(object):
+    def __init__(self, item=[]):
+        self.items = item
+
+
 class Room(object):
     def __init__(self, name, description, north=None, south=None, east=None, west=None, characters=None, item=[]):
         self.name = name
@@ -347,8 +352,8 @@ Manhattan = Room("Manhattan", "This city is home of the infamous Percy Jackson. 
 
 Ghana = Room("Ghana", "Welcome to Ghana. Currently and back in ancient times this was and is a trade center. Back"
                       "then salts, spices, gold and other goods were traded. You have found a boat full of gold as "
-                      "well as valuable artifacts left behind by the ancient civilization.", None, None, "Belize",
-             "Egypt", None, [gold_boat])
+                      "well as valuable artifacts left behind by the ancient civilization.", None, None, "Egypt",
+             "Belize", None, [gold_boat])
 
 Cape_Town = Room("Cape Town", "You made it to Cape Town. Congrats. Well there's not much for you to find here but there"
                  "is plenty of fine sights to see. You see a great many of well-known sights and go to different "
@@ -364,7 +369,7 @@ Rome = Room('Rome', "Welcome to Rome. This is the landmine of historical backgro
                     "Then, there is the Colosseum where gladiators and slaves fought. Here there is the rumored"
                     "treasure of King Alaric form the famous Sack of Rome. A roman gladiator is here,"
                     "left to protect Rome. Fight him for the glory of Rome and the treasure.", "Venice", "Egypt", None,
-            None, Gladiator)
+            "Greece", Gladiator)
 
 Venice = Room('Venice', "Welcome to Venice! There is no treasure here. Sorry. But on the other hand you get to enjoy"
                         "this beautiful city in Italy. You can go on a ride in one the canals, go shopping or eat a lot"
@@ -441,7 +446,6 @@ while playing:
             print(current_item.description)
             print()
             print('Pick them up.')
-            
         print()
 
     command = input(">_")
@@ -454,6 +458,21 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way")
+            print()
+    elif "pick up " in command:
+        item_name = command[8:]
+
+        found_item = None
+        for item in player.current_location.item:
+            if item_name == item_name:
+                found_item = item
+
+        if found_item is None:
+            print("I don't see one")
+        else:
+            player.inventory.append(found_item)
+            player.current_location.item.remove(found_item)
+            print()
     elif treasures == 10:
         playing = False
         print("You own congrats")
