@@ -326,8 +326,8 @@ Nuuk = Room("Nuuk", "This is the capital and largest city in Greenland. It is th
 London = Room('London', "Welcome to London. Located in the United Kingdom and traveled to by many people. There's"
                         "plenty to see and is the ultimate location spot for many. Don't you just love it. Everybody "
                         "here talks with a posh accent. You travel around Europe some more and you manage to find"
-                        "Excalibur. You don't become king but still pick it up.", None, None, "Great_Wall", "Pitt_Lake",
-              None, [excalibur])
+                        "Excalibur. You don't become king but still pick it up.", None, "Split", "Great_Wall",
+              "Pitt_Lake", None, [excalibur])
 
 Belize = Room('Belize', "Welcome to Belize. This country is located in South America. Here you can find some temples"
                         "from when the Mayans lived here. You have found some artifacts that have been left behind "
@@ -336,6 +336,7 @@ Belize = Room('Belize', "Welcome to Belize. This country is located in South Ame
 Buenos_Aries = Room("Buenos Aries", "Welcome to Buenos Aries! If you have watched the Netflix T.V. show Carmen"
                                     "San Diego, then you know she was born here. There's lot to see and plenty of life "
                                     "in this city located in Argentina.", "Belize", "Antarctica")
+
 Antarctica = Room("Antarctica", "How did you end up here? Oh well, now that your here you can freeze because it's"
                                 "winter time and it get's COLD. Also, tell the penguins and polar bears the Creator "
                                 "said hi. I should go back there sometime.", "Buenos_Aries")
@@ -472,9 +473,10 @@ while playing:
         else:
             player.inventory.append(found_item)
             player.current_location.item.remove(found_item)
-            print()
-    elif treasures == 10:
-        playing = False
-        print("You own congrats")
+            print("You picked up %s" % item_name)
+            treasures += 1
+            if treasures == 10:
+                playing = False
+                print("You won the game")
     else:
         print("Command not recognized.")
