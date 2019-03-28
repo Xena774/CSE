@@ -369,8 +369,8 @@ Rome = Room('Rome', "Welcome to Rome. This is the landmine of historical backgro
                     "that still has yet to be discovered. Rome has it's famous catacombs underneath the surface. "
                     "Then, there is the Colosseum where gladiators and slaves fought. Here there is the rumored"
                     "treasure of King Alaric form the famous Sack of Rome. A roman gladiator is here,"
-                    "left to protect Rome. Fight him for the glory of Rome and the treasure.", "Venice", "Egypt", None,
-            "Greece", Gladiator)
+                    "left to protect Rome. Fight him for the glory of Rome and the treasure.", "Venice", "Egypt",
+            "Greece", None, Gladiator)
 
 Venice = Room('Venice', "Welcome to Venice! There is no treasure here. Sorry. But on the other hand you get to enjoy"
                         "this beautiful city in Italy. You can go on a ride in one the canals, go shopping or eat a lot"
@@ -384,7 +384,7 @@ New_Delhi = Room('New Delhi', "Welcome to New Delhi! This is the capital of Indi
 
 Greece = Room("Greece", "Greece home of many things you see today in modern society. There is so much history here. "
                         "The Pantheon and Mount Olympus. This is the home of many greek heroes. You have found the"
-                        "club of Hercules and the spear of Achilles.", None, None, "Rome", None, None, [achilles_spear,
+                        "club of Hercules and the spear of Achilles.", None, None, None, "Rome", None, [achilles_spear,
                                                                                                         hercules_club])
 
 Great_Wall = Room("Great Wall of China", "The great wall has been around for forever and was a way to protect China. "
@@ -421,6 +421,20 @@ class Player(object):
         """
         room_name = getattr(self.current_location, direction)
         return globals()[room_name]
+
+    def attack(self, target):
+        print("You attack %s for %d damage" % (target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
+
+    def take_damage(self, damage):
+        if damage < self.armor.armor_life:
+            print("You are have strong armor. You will not fall.")
+        else:
+            self.health -= damage - self.armor.armor_life
+            if self.health < 0:
+                self.health = 0
+                print("You have fallen")
+        print("You have %d health left" % self.health)
 
 
 treasures = 0
@@ -460,6 +474,24 @@ while playing:
         except KeyError:
             print("I can't go that way")
             print()
+    elif "pick up all" in command:
+        for item in player.current_location.item:
+            player.inventory.append(item)
+            player.current_location.item.remove(item)
+            print("You picked up %s" % item.name)
+            treasures += 2
+            if treasures == 10:
+                playing = False
+                print("You won the game")
+
+    elif player.current_location.character is not None:
+        print("There is an enemy in here.")
+        print("It is a %s" % player.current_location.character.name)
+        print("Fight it.")
+        if "fight" in command:
+            player.attack(player.current_location.character)
+            player.take_damage(player.current_location.character)
+
     elif "pick up " in command:
         item_name = command[8:]
 
