@@ -102,7 +102,7 @@ class OdysseusBow(Bow):
                            "who was killed for challenging Apollo."
 
 
-class Riptide(Sword):
+class Riptide(Weapon):
     def __init__(self):
         super(Riptide, self).__init__("Riptide")
         self.attack_power = 50
@@ -348,8 +348,8 @@ Split = Room("Split", "This city is located in a country called Croatia. Yes, th
 
 Manhattan = Room("Manhattan", "This city is home of the infamous Percy Jackson. Near here is New York city. Yes, the "
                               "big apple where the empire state building lies. There's many history here but you know"
-                              " that the Greek/Roman Gods live here. You already have weapons and armor", None, None,
-                 "Venice", "Fresno")
+                              " that the Greek/Roman Gods live here. You already have a sword called Rhindon and armor"
+                              " from Camp Half-Blood.", None, None, "Venice", "Fresno")
 
 Ghana = Room("Ghana", "Welcome to Ghana. Currently and back in ancient times this was and is a trade center. Back"
                       "then salts, spices, gold and other goods were traded. You have found a boat full of gold as "
@@ -380,7 +380,8 @@ Venice = Room('Venice', "Welcome to Venice! There is no treasure here. Sorry. Bu
 New_Delhi = Room('New Delhi', "Welcome to New Delhi! This is the capital of Indian and is very populated. Here there is"
                               "lots of history. History class has taught us a lot about what Indians believed about"
                               "after life and resurrection. I wonder what I'll be in the next life but I hope it's"
-                              " good", "Great_Wall", "Australia", None, "Venice")
+                              " good. Also, for some reason the bow of Odysseus is here. Pick it up", "Great_Wall",
+                 "Australia", None, "Venice", None, [odysseus_bow])
 
 Greece = Room("Greece", "Greece home of many things you see today in modern society. There is so much history here. "
                         "The Pantheon and Mount Olympus. This is the home of many greek heroes. You have found the"
@@ -399,11 +400,11 @@ Australia = Room("Australia", "Welcome to Australia! This place is beautiful and
 
 
 class Player(object):
-    def __init__(self, starting_location, weapon=[]):
+    def __init__(self, starting_location):
         self.health = 100
         self.inventory = []
         self.current_location = starting_location
-        self.weapon = weapon
+        self.weapon = riptide and rhindon
         self.armor = camp_half_blood_armor
 
     def move(self, new_location):
@@ -440,7 +441,7 @@ class Player(object):
 treasures = 0
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 playing = True
-player = Player(Manhattan, [riptide, rhindon, odysseus_bow])
+player = Player(Manhattan)
 
 print("Welcome to Around the World. In this game you travel to different places. Sometimes it's a city, country,"
       "state. The goal is to collect things in different places of the world. You have to collect every treasure to"
@@ -463,10 +464,16 @@ while playing:
             print('Pick them up.')
         print()
 
+    elif player.current_location.characters is not None:
+        print("There is an enemy in here.")
+        print("It is a %s" % player.current_location.characters.name)
+        print("Fight it.")
+
     command = input(">_")
     print()
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
+
     elif command in directions:
         try:
             next_room = player.find_room(command)
@@ -474,23 +481,20 @@ while playing:
         except KeyError:
             print("I can't go that way")
             print()
+
     elif "pick up all" in command:
         for item in player.current_location.item:
             player.inventory.append(item)
             player.current_location.item.remove(item)
             print("You picked up %s" % item.name)
             treasures += 2
-            if treasures == 10:
+            if treasures == 12:
                 playing = False
                 print("You won the game")
 
-    elif player.current_location.character is not None:
-        print("There is an enemy in here.")
-        print("It is a %s" % player.current_location.character.name)
-        print("Fight it.")
-        if "fight" in command:
-            player.attack(player.current_location.character)
-            player.take_damage(player.current_location.character)
+    elif "fight" in command:
+        player.attack(player.current_location.characters)
+        player.take_damage(player.current_location.characters)
 
     elif "pick up " in command:
         item_name = command[8:]
