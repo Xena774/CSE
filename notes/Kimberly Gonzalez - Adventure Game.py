@@ -310,7 +310,7 @@ Alaska = Room("Alaska", "Welcome to Alaska. The largest state in the United Stat
                         "the infamous dog-sled races that go from Anchorage to Nome. There is ton of open spaces,"
                         "mountains, and forests. You enjoy all the nice sites. There's not much here for you to"
                         "discover. There is nothing but a Hydra here for you to fight.", None, None, "Pitt_Lake", None,
-              Hydra)
+              Hydra())
 
 Oahu = Room("Oahu", "Oahu is part of the Hawaiian islands and contains the capital of Hawaii which is Honolulu. Oahu"
                     "is the place to go if you ever need a vacation in the islands. There's plenty to see and of "
@@ -339,7 +339,8 @@ Buenos_Aries = Room("Buenos Aries", "Welcome to Buenos Aries! If you have watche
 
 Antarctica = Room("Antarctica", "How did you end up here? Oh well, now that your here you can freeze because it's"
                                 "winter time and it get's COLD. Also, tell the penguins and polar bears the Creator "
-                                "said hi. I should go back there sometime.", "Buenos_Aries")
+                                "said hi. I should go back there sometime.", "Buenos_Aries", None, None, None, None,
+                  [odysseus_bow])
 
 Split = Room("Split", "This city is located in a country called Croatia. Yes, the town is called Split. For those"
                       "that have read the Heroes of Olympus series than you know the Temple of Jupiter lies here."
@@ -363,14 +364,14 @@ Cape_Town = Room("Cape Town", "You made it to Cape Town. Congrats. Well there's 
 Egypt = Room("Egypt", "This marvelous country has ton of historic background that you should have learned about in"
                       "history class. Hope you payed attention. There's ton of tombs to still be discovered. For "
                       "example, Queen Nefertiti. You have just found it in a secret door inside King Tut's tomb. But a"
-                      "mummy is in there.", "Rome", "Cape_Town", None, 'Ghana', Mummy, [queen_tomb])
+                      "mummy is in there.", "Rome", "Cape_Town", None, 'Ghana', Mummy(), [queen_tomb])
 
 Rome = Room('Rome', "Welcome to Rome. This is the landmine of historical background. There is so much history here"
                     "that still has yet to be discovered. Rome has it's famous catacombs underneath the surface. "
                     "Then, there is the Colosseum where gladiators and slaves fought. Here there is the rumored"
                     "treasure of King Alaric form the famous Sack of Rome. A roman gladiator is here,"
                     "left to protect Rome. Fight him for the glory of Rome and the treasure.", "Venice", "Egypt",
-            "Greece", None, Gladiator)
+            "Greece", None, Gladiator())
 
 Venice = Room('Venice', "Welcome to Venice! There is no treasure here. Sorry. But on the other hand you get to enjoy"
                         "this beautiful city in Italy. You can go on a ride in one the canals, go shopping or eat a lot"
@@ -381,12 +382,11 @@ New_Delhi = Room('New Delhi', "Welcome to New Delhi! This is the capital of Indi
                               "lots of history. History class has taught us a lot about what Indians believed about"
                               "after life and resurrection. I wonder what I'll be in the next life but I hope it's"
                               " good. Also, for some reason the bow of Odysseus is here. Pick it up", "Great_Wall",
-                 "Australia", None, "Venice", None, [odysseus_bow])
+                 "Australia", None, "Venice", None, [hercules_club])
 
 Greece = Room("Greece", "Greece home of many things you see today in modern society. There is so much history here. "
                         "The Pantheon and Mount Olympus. This is the home of many greek heroes. You have found the"
-                        "club of Hercules and the spear of Achilles.", None, None, None, "Rome", None, [achilles_spear,
-                                                                                                        hercules_club])
+                        "club of Hercules and the spear of Achilles.", None, None, None, "Rome", None, [achilles_spear])
 
 Great_Wall = Room("Great Wall of China", "The great wall has been around for forever and was a way to protect China. "
                   "Although from Mulan we see that the plan didn't work. People managed to find ways to get through. A "
@@ -487,8 +487,8 @@ while playing:
             player.inventory.append(item)
             player.current_location.item.remove(item)
             print("You picked up %s" % item.name)
-            treasures += 2
-            if treasures == 12:
+            treasures += 1
+            if treasures == 11:
                 playing = False
                 print("You won the game")
 
@@ -511,8 +511,10 @@ while playing:
             player.current_location.item.remove(found_item)
             print("You picked up %s" % item_name)
             treasures += 1
-            if treasures == 10:
+            if treasures == 11:
                 playing = False
                 print("You won the game")
     else:
         print("Command not recognized.")
+
+    # Random Move
