@@ -236,26 +236,38 @@ class Bard(object):
         self.description = "Here is a bard or a random spewer of quotes that many people don't understand."
 
     def quotes(self):
-        chance = random.randint(1, 6)
+        chance = random.randint(1, 10)
         if chance == 1:
             print("Life without experience and sufferings is not life.")
-            print()
+
         elif chance == 2:
             print("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the"
                   " imagination, and charm and gaiety to life and to everything.")
-            print()
+
         elif chance == 3:
             print("Whenever you find yourself on the side of the majority, it is time to pause and reflect.")
-            print()
+
         elif chance == 4:
             print("Be kind, for everyone you meet is fighting a hard battle.")
-            print()
+
         elif chance == 5:
             print("Every heart sings a song, incomplete, until another heart whispers back . Those who wish to sing"
                   " always find a song.")
+
         elif chance == 6:
             print("Wise men talk because they have something to say; fools, because they have to say something.")
+
+        elif chance == 7:
+            print("People are more difficult to work with than machines. And when yo break a person, he can't be fixed")
+
+        elif chance == 8:
             print("")
+
+        elif chance == 9:
+            print("")
+
+        elif chance == 10:
+            print("If my life is going to mean anything, I have to live it myslef.")
 
 
 class Enemy(object):
@@ -438,6 +450,7 @@ class Player(object):
         print("You have %d health left" % self.health)
 
 
+bard = Bard()
 treasures = 0
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 playing = True
@@ -516,5 +529,64 @@ while playing:
                 print("You won the game")
     else:
         print("Command not recognized.")
+        print()
 
     # Random Move
+    random_move = random.randint(1, 100)
+    if random_move > 50:
+        if random_move < 10:
+            print("You are the lucky contestant to get quoted by some random person.")
+            print()
+            bard.quotes()
+            print()
+
+        elif random_move >= 10 < 20:
+            print("You have terrible luck. Here's a quote")
+            print()
+            bard.quotes()
+            print()
+
+        elif random_move >= 20 < 30:
+            print("DUUN, DUUN, DUUUUUNNNNNNNNN!!!")
+            print()
+            bard.quotes()
+            print()
+
+        elif random_move >= 30 < 40:
+            print("It's coming for you.")
+            print()
+            bard.quotes()
+            print()
+
+        else:
+            print("Don't you just love quotes")
+            print()
+            bard.quotes()
+            print()
+    else:
+        if random_move < 60:
+            print("You escaped getting a random quote. You can't avoid it for long.")
+            print()
+
+        elif random_move >= 60 < 70:
+            print("You won't escape for long.")
+            print()
+
+        elif random_move >= 70 < 80:
+            print("The quotes are coming for you...")
+            print()
+
+        elif random_move >= 80 < 90:
+            print("How have you avoided the quotes.")
+            print()
+
+        else:
+            print("Remember the quotes are coming.")
+            print()
+
+
+if not playing and treasures == 11:
+    print("You won the game.")
+
+else:
+    print("You lose the game. Sorry, not sorry.")
