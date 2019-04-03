@@ -258,16 +258,25 @@ class Bard(object):
             print("Wise men talk because they have something to say; fools, because they have to say something.")
 
         elif chance == 7:
-            print("People are more difficult to work with than machines. And when yo break a person, he can't be fixed")
+            print("People are more difficult to work with than machines. And when you break a person, he can't be"
+                  " fixed")
 
         elif chance == 8:
-            print("")
+            print("Comic books to me are fairy tales for grown-ups.")
 
         elif chance == 9:
-            print("")
+            print("You control your own life. Your own will is extremely powerful.")
 
         elif chance == 10:
-            print("If my life is going to mean anything, I have to live it myslef.")
+            print("If my life is going to mean anything, I have to live it myself.")
+
+        elif chance == 11:
+            print("We've all got both light and dark inside us. What matters is the part we choose to act on . That's "
+                  "who we really are. ")
+
+        elif chance == 12:
+            print("Being a hero doesn't mean you are invincible, it means you are brave enough to stand up and do"
+                  " what's right.")
 
 
 class Enemy(object):
@@ -309,53 +318,53 @@ class Hydra(Enemy):
 
 # My own
 
-Fresno = Room("Fresno", "Welcome to Fresno! Ahh, Fresno. Nestled in California's San Joaquin Valley. This is the fifth"
+Fresno = Room("Fresno", "Welcome to Fresno! Ahh, Fresno. Nestled in California's San Joaquin Valley. This is the fifth "
                         "most populous city in the state. We have a college called Fresno State University which ranked"
-                        "a whooping 223 in National College Universities.", "Pitt_Lake", "Belize", 'Manhattan', 'Oahu')
+                        " a whooping 223 in National College Universities.", "Pitt_Lake", "Belize", 'Manhattan', 'Oahu')
 
 Pitt_Lake = Room("Pitt Lake", "This lake is located in the lower mainland of British Columbia. It is among one of the"
-                              "lakes in the world. It is a beautiful lake that offers many things. But there's more"
-                              "than meets the eye. Here is where the legendary Pitt's lost gold mine is located. You"
+                              " lakes in the world. It is a beautiful lake that offers many things. But there's more"
+                              " than meets the eye. Here is where the legendary Pitt's lost gold mine is located. You "
                               "have now discovered it, great.", 'Nuuk', 'Fresno', 'London', 'Alaska', None, [gold_mine])
 
 Alaska = Room("Alaska", "Welcome to Alaska. The largest state in the United States of America or 'merica. Here we have"
-                        "the infamous dog-sled races that go from Anchorage to Nome. There is ton of open spaces,"
-                        "mountains, and forests. You enjoy all the nice sites. There's not much here for you to"
-                        "discover. There is nothing but a Hydra here for you to fight.", None, None, "Pitt_Lake", None,
+                        " the infamous dog-sled races that go from Anchorage to Nome. There is ton of open spaces,"
+                        " mountains, and forests. You enjoy all the nice sites. There's not much here for you to"
+                        " discover. There is nothing but a Hydra here for you to fight.", None, None, "Pitt_Lake", None,
               Hydra())
 
 Oahu = Room("Oahu", "Oahu is part of the Hawaiian islands and contains the capital of Hawaii which is Honolulu. Oahu"
-                    "is the place to go if you ever need a vacation in the islands. There's plenty to see and of "
-                    "beaches. In this island is where the Attack on Pearl Harbor occurred on the morning of December"
-                    "7, 1941. There is no treasure to collect", None, None, "Fresno")
+                    " is the place to go if you ever need a vacation in the islands. There's plenty to see and of "
+                    " beaches. In this island is where the Attack on Pearl Harbor occurred on the morning of December"
+                    " 7, 1941. There is no treasure to collect", None, None, "Fresno")
 
-Nuuk = Room("Nuuk", "This is the capital and largest city in Greenland. It is the most populous city/town in"
-                    "Greenland with a whooping 17,492. It's large fjord system is known for waters, humpback whales,"
-                    "and icebergs. Here a painting of the famous Mother of the Sea can be found. Mythology says when"
-                    "an Inuit breaks a taboo in society, she entangles fishes and prevents them from being caught."
-                    "Collect painting", None, "Pitt_Lake", None, None, None, [nuuk_painting])
+Nuuk = Room("Nuuk", "This is the capital and largest city in Greenland. It is the most populous city/town in "
+                    " Greenland with a whooping 17,492. It's large fjord system is known for waters, humpback whales,"
+                    " and icebergs. Here a painting of the famous Mother of the Sea can be found. Mythology says when"
+                    " an Inuit breaks a taboo in society, she entangles fishes and prevents them from being caught."
+                    " Collect painting", None, "Pitt_Lake", None, None, None, [nuuk_painting])
 
-London = Room('London', "Welcome to London. Located in the United Kingdom and traveled to by many people. There's"
+London = Room('London', "Welcome to London. Located in the United Kingdom and traveled to by many people. There's "
                         "plenty to see and is the ultimate location spot for many. Don't you just love it. Everybody "
-                        "here talks with a posh accent. You travel around Europe some more and you manage to find"
+                        "here talks with a posh accent. You travel around Europe some more and you manage to find "
                         "Excalibur. You don't become king but still pick it up.", None, "Split", "Great_Wall",
               "Pitt_Lake", None, [excalibur])
 
-Belize = Room('Belize', "Welcome to Belize. This country is located in South America. Here you can find some temples"
+Belize = Room('Belize', "Welcome to Belize. This country is located in South America. Here you can find some temples "
                         "from when the Mayans lived here. You have found some artifacts that have been left behind "
                         "by the Mayans", "Fresno", "Buenos_Aries", None, None, None, [mayan_artifacts])
 
-Buenos_Aries = Room("Buenos Aries", "Welcome to Buenos Aries! If you have watched the Netflix T.V. show Carmen"
+Buenos_Aries = Room("Buenos Aries", "Welcome to Buenos Aries! If you have watched the Netflix T.V. show Carmen "
                                     "San Diego, then you know she was born here. There's lot to see and plenty of life "
                                     "in this city located in Argentina.", "Belize", "Antarctica")
 
-Antarctica = Room("Antarctica", "How did you end up here? Oh well, now that your here you can freeze because it's"
+Antarctica = Room("Antarctica", "How did you end up here? Oh well, now that your here you can freeze because it's "
                                 "winter time and it get's COLD. Also, tell the penguins and polar bears the Creator "
                                 "said hi. I should go back there sometime.", "Buenos_Aries", None, None, None, None,
                   [odysseus_bow])
 
-Split = Room("Split", "This city is located in a country called Croatia. Yes, the town is called Split. For those"
-                      "that have read the Heroes of Olympus series than you know the Temple of Jupiter lies here."
+Split = Room("Split", "This city is located in a country called Croatia. Yes, the town is called Split. For those "
+                      "that have read the Heroes of Olympus series than you know the Temple of Jupiter lies here. "
                       "Some ambrosia in the corner of the temple that can only be seen by you.", "London", None, None,
              None, None, [ambrosia])
 
@@ -365,40 +374,39 @@ Manhattan = Room("Manhattan", "This city is home of the infamous Percy Jackson. 
                               " from Camp Half-Blood.", None, None, "Venice", "Fresno")
 
 Ghana = Room("Ghana", "Welcome to Ghana. Currently and back in ancient times this was and is a trade center. Back"
-                      "then salts, spices, gold and other goods were traded. You have found a boat full of gold as "
-                      "well as valuable artifacts left behind by the ancient civilization.", None, None, "Egypt",
+                      " then salts, spices, gold and other goods were traded. You have found a boat full of gold as "
+                      " well as valuable artifacts left behind by the ancient civilization.", None, None, "Egypt",
              "Belize", None, [gold_boat])
 
 Cape_Town = Room("Cape Town", "You made it to Cape Town. Congrats. Well there's not much for you to find here but there"
-                 "is plenty of fine sights to see. You see a great many of well-known sights and go to different "
+                 " is plenty of fine sights to see. You see a great many of well-known sights and go to different "
                  "tourist attractions", "Egypt")
 
 Egypt = Room("Egypt", "This marvelous country has ton of historic background that you should have learned about in"
-                      "history class. Hope you payed attention. There's ton of tombs to still be discovered. For "
+                      " history class. Hope you payed attention. There's ton of tombs to still be discovered. For "
                       "example, Queen Nefertiti. You have just found it in a secret door inside King Tut's tomb. But a"
-                      "mummy is in there.", "Rome", "Cape_Town", None, 'Ghana', Mummy(), [queen_tomb])
+                      " mummy is in there.", "Rome", "Cape_Town", None, 'Ghana', Mummy(), [queen_tomb])
 
 Rome = Room('Rome', "Welcome to Rome. This is the landmine of historical background. There is so much history here"
-                    "that still has yet to be discovered. Rome has it's famous catacombs underneath the surface. "
-                    "Then, there is the Colosseum where gladiators and slaves fought. Here there is the rumored"
-                    "treasure of King Alaric form the famous Sack of Rome. A roman gladiator is here,"
-                    "left to protect Rome. Fight him for the glory of Rome and the treasure.", "Venice", "Egypt",
+                    " that still has yet to be discovered. Rome has it's famous catacombs underneath the surface. "
+                    "Then, there is the Colosseum where gladiators and slaves fought. A roman gladiator is here,"
+                    " left to protect Rome. Fight him for the glory of Rome.", "Venice", "Egypt",
             "Greece", None, Gladiator())
 
-Venice = Room('Venice', "Welcome to Venice! There is no treasure here. Sorry. But on the other hand you get to enjoy"
+Venice = Room('Venice', "Welcome to Venice! There is no treasure here. Sorry. But on the other hand you get to enjoy "
                         "this beautiful city in Italy. You can go on a ride in one the canals, go shopping or eat a lot"
-                        "of delicious Italian food. And remember do not order pizza.", None, "Rome", "New_Delhi",
+                        " of delicious Italian food. And remember do not order pizza.", None, "Rome", "New_Delhi",
               "Manhattan")
 
 New_Delhi = Room('New Delhi', "Welcome to New Delhi! This is the capital of Indian and is very populated. Here there is"
-                              "lots of history. History class has taught us a lot about what Indians believed about"
-                              "after life and resurrection. I wonder what I'll be in the next life but I hope it's"
+                              " lots of history. History class has taught us a lot about what Indians believed about"
+                              " after life and resurrection. I wonder what I'll be in the next life but I hope it's"
                               " good. Also, for some reason the bow of Odysseus is here. Pick it up", "Great_Wall",
                  "Australia", None, "Venice", None, [hercules_club])
 
-Greece = Room("Greece", "Greece home of many things you see today in modern society. There is so much history here. "
-                        "The Pantheon and Mount Olympus. This is the home of many greek heroes. You have found the"
-                        "club of Hercules and the spear of Achilles.", None, None, None, "Rome", None, [achilles_spear])
+Greece = Room("Greece", " Greece home of many things you see today in modern society. There is so much history here. "
+                        " The Pantheon and Mount Olympus. This is the home of many greek heroes. You have found the"
+                        " club of Hercules and the spear of Achilles.", None, None, None, "Rome", None, [achilles_spear])
 
 Great_Wall = Room("Great Wall of China", "The great wall has been around for forever and was a way to protect China. "
                   "Although from Mulan we see that the plan didn't work. People managed to find ways to get through. A "
@@ -508,6 +516,10 @@ while playing:
     elif "fight" in command:
         player.attack(player.current_location.characters)
         player.take_damage(player.current_location.characters)
+        if player.health > 0:
+            player.move(Antarctica)
+        if player.current_location.characters.health < 0:
+
 
     elif "pick up " in command:
         item_name = command[8:]
