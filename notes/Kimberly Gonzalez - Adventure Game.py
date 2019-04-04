@@ -194,12 +194,12 @@ class GoldenReef(Treasure):
 
 
 class Inventory(object):
-    def __init__(self, item=[]):
-        self.items = item
+    def __init__(self, items=[]):
+        self.items = items
 
 
 class Room(object):
-    def __init__(self, name, description, north=None, south=None, east=None, west=None, characters=None, item=[]):
+    def __init__(self, name, description, north=None, south=None, east=None, west=None, characters=None, items=[]):
         self.name = name
         self.description = description
         self.north = north
@@ -207,7 +207,7 @@ class Room(object):
         self.east = east
         self.west = west
         self.characters = characters
-        self.item = item
+        self.item = items
 
 
 golden_reef = GoldenReef()
@@ -406,7 +406,8 @@ New_Delhi = Room('New Delhi', "Welcome to New Delhi! This is the capital of Indi
 
 Greece = Room("Greece", " Greece home of many things you see today in modern society. There is so much history here. "
                         " The Pantheon and Mount Olympus. This is the home of many greek heroes. You have found the"
-                        " club of Hercules and the spear of Achilles.", None, None, None, "Rome", None, [achilles_spear])
+                        " club of Hercules and the spear of Achilles.", None, None, None, "Rome", None,
+              [achilles_spear])
 
 Great_Wall = Room("Great Wall of China", "The great wall has been around for forever and was a way to protect China. "
                   "Although from Mulan we see that the plan didn't work. People managed to find ways to get through. A "
@@ -414,8 +415,8 @@ Great_Wall = Room("Great Wall of China", "The great wall has been around for for
                   'Venice')
 
 Australia = Room("Australia", "Welcome to Australia! This place is beautiful and the accents are amazing. There's also"
-                 "the great surfing competitions that take place here. This place is also where multiple places "
-                 "sent their prisoners. You have found the lost gold reef. Congrats!", "New_Delhi", None, None, None,
+                 " the great surfing competitions that take place here. This place is also where multiple places "
+                 " sent their prisoners. You have found the lost gold reef. Congrats!", "New_Delhi", None, None, None,
                  None, [golden_reef])
 
 
@@ -424,7 +425,7 @@ class Player(object):
         self.health = 100
         self.inventory = []
         self.current_location = starting_location
-        self.weapon = riptide and rhindon
+        self.weapon = riptide
         self.armor = camp_half_blood_armor
 
     def move(self, new_location):
@@ -495,6 +496,12 @@ while playing:
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
 
+    elif "got" in command:
+        playing = 11
+
+    elif treasures == 11:
+        playing = False
+
     elif command in directions:
         try:
             next_room = player.find_room(command)
@@ -519,7 +526,7 @@ while playing:
         if player.health > 0:
             player.move(Antarctica)
         if player.current_location.characters.health < 0:
-
+            print("Enemy has been eliminated.")
 
     elif "pick up " in command:
         item_name = command[8:]
