@@ -1,6 +1,21 @@
 import random
 
 
+def fight(enemy):
+    while enemy.health > 0 and player.health > 0:
+        lcommand = input("What do you want to do?")
+        player.attack(enemy)
+        enemy.attack(player)
+        # player.take_damage(player.current_location.characters)
+
+    if enemy.health <= 0:
+        print("Enemy has been eliminated.")
+        player.current_location.characters = None
+
+    if player.health <= 0:
+        player.move(Antarctica)
+
+
 class Item(object):
     def __init__(self, name):
         self.name = name
@@ -13,7 +28,7 @@ class Weapon(Item):
 
 
 class Armor(Item):
-    def __init__(self, name, life=100, armor=None):
+    def __init__(self, name, life=1, armor=None):
         super(Armor, self).__init__(name)
         self.own = False
         self.armor_life = life
@@ -422,6 +437,7 @@ Australia = Room("Australia", "Welcome to Australia! This place is beautiful and
 
 class Player(object):
     def __init__(self, starting_location):
+        self.name = "you"
         self.health = 100
         self.inventory = []
         self.current_location = starting_location
@@ -451,6 +467,7 @@ class Player(object):
     def take_damage(self, damage):
         if damage < self.armor.armor_life:
             print("You are have strong armor. You will not fall.")
+
         else:
             self.health -= damage - self.armor.armor_life
             if self.health < 0:
@@ -464,6 +481,7 @@ treasures = 0
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
 playing = True
 player = Player(Manhattan)
+player.armor.armor_life = 100
 
 print("Welcome to Around the World. In this game you travel to different places. Sometimes it's a city, country,"
       "state. The goal is to collect things in different places of the world. You have to collect every treasure to"
@@ -478,6 +496,7 @@ while playing:
     if len(player.current_location.item) > 0:
         print()
         print("There are the following items in the room:")
+
         for num, current_item in enumerate(player.current_location.item):
             print(str(num + 1) + ": ", end="")
             print(current_item.name + " - ", end="")
@@ -506,6 +525,7 @@ while playing:
         try:
             next_room = player.find_room(command)
             player.move(next_room)
+
         except KeyError:
             print("I can't go that way")
             print()
@@ -516,17 +536,13 @@ while playing:
             player.current_location.item.remove(item)
             print("You picked up %s" % item.name)
             treasures += 1
+
             if treasures == 11:
                 playing = False
                 print("You won the game")
 
-    elif "fight" in command:
-        player.attack(player.current_location.characters)
-        player.take_damage(player.current_location.characters)
-        if player.health > 0:
-            player.move(Antarctica)
-        if player.current_location.characters.health < 0:
-            print("Enemy has been eliminated.")
+    elif command.lower() in ['attack', 'fight', 'demolish']:
+        fight(player.current_location.characters)
 
     elif "pick up " in command:
         item_name = command[8:]
@@ -538,6 +554,7 @@ while playing:
 
         if found_item is None:
             print("I don't see one")
+
         else:
             player.inventory.append(found_item)
             player.current_location.item.remove(found_item)
@@ -546,6 +563,7 @@ while playing:
             if treasures == 11:
                 playing = False
                 print("You won the game")
+
     else:
         print("Command not recognized.")
         print()
@@ -582,6 +600,7 @@ while playing:
             print()
             bard.quotes()
             print()
+
     else:
         if random_move < 60:
             print("You escaped getting a random quote. You can't avoid it for long.")
