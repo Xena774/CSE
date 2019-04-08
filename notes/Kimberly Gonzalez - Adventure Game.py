@@ -94,7 +94,7 @@ class Pole(Weapon):
 
 class Achilles(Spear):
     def __init__(self):
-        super(Achilles, self).__init__("Achilles")
+        super(Achilles, self).__init__("Achilles spear")
         self.description = "The spear used by Achilles."
 
 
@@ -132,11 +132,6 @@ class Excalibur(Sword):
         self.description = "This sword was wielded by the legendary King Arthur. This is what made him a true king" \
                            "and great leader of Camelot. If you watched the series Merlin, then you know all about" \
                            "it. 'Or Once Upon a Time' it's the bottom part of Rumpelstiltskin dagger."
-
-
-class Rhindon(Sword):
-    def __init__(self):
-        super(Rhindon, self).__init__("Rhindon")
 
 
 class Imperial(Sword):
@@ -233,7 +228,6 @@ mayan_artifacts = Mayan()
 nuuk_painting = Painting()
 gold_mine = GoldMine()
 hercules_club = HerculesClub()
-rhindon = Rhindon()
 excalibur = Excalibur()
 riptide = Riptide()
 odysseus_bow = OdysseusBow()
@@ -375,8 +369,9 @@ Buenos_Aries = Room("Buenos Aries", "Welcome to Buenos Aries! If you have watche
 
 Antarctica = Room("Antarctica", "How did you end up here? Oh well, now that your here you can freeze because it's "
                                 "winter time and it get's COLD. Also, tell the penguins and polar bears the Creator "
-                                "said hi. I should go back there sometime.", "Buenos_Aries", None, None, None, None,
-                  [odysseus_bow])
+                                "said hi. I should go back there sometime. Also, you should probaly pick up the club"
+                                " of Hercules.", "Buenos_Aries", None, None, None, None,
+                  [hercules_club])
 
 Split = Room("Split", "This city is located in a country called Croatia. Yes, the town is called Split. For those "
                       "that have read the Heroes of Olympus series than you know the Temple of Jupiter lies here. "
@@ -416,13 +411,13 @@ Venice = Room('Venice', "Welcome to Venice! There is no treasure here. Sorry. Bu
 New_Delhi = Room('New Delhi', "Welcome to New Delhi! This is the capital of Indian and is very populated. Here there is"
                               " lots of history. History class has taught us a lot about what Indians believed about"
                               " after life and resurrection. I wonder what I'll be in the next life but I hope it's"
-                              " good. Also, for some reason the bow of Odysseus is here. Pick it up", "Great_Wall",
-                 "Australia", None, "Venice", None, [hercules_club])
+                              " good.", "Great_Wall",
+                 "Australia", None, "Venice", None)
 
 Greece = Room("Greece", " Greece home of many things you see today in modern society. There is so much history here. "
                         " The Pantheon and Mount Olympus. This is the home of many greek heroes. You have found the"
                         " club of Hercules and the spear of Achilles.", None, None, None, "Rome", None,
-              [achilles_spear])
+              [achilles_spear, odysseus_bow])
 
 Great_Wall = Room("Great Wall of China", "The great wall has been around for forever and was a way to protect China. "
                   "Although from Mulan we see that the plan didn't work. People managed to find ways to get through. A "
@@ -479,13 +474,14 @@ class Player(object):
 bard = Bard()
 treasures = 0
 directions = ['north', 'south', 'east', 'west', 'up', 'down']
+short_directions = ['n', 's', 'e', 'w']
 playing = True
 player = Player(Manhattan)
 player.armor.armor_life = 100
 
 print("Welcome to Around the World. In this game you travel to different places. Sometimes it's a city, country,"
       "state. The goal is to collect things in different places of the world. You have to collect every treasure to"
-      " win the game. You are have Camp Half-Blood armor and are armed with the swords Rhindon, Riptide("
+      " win the game. You are have Camp Half-Blood armor and are armed with the sword Riptide("
       "Given to you by Percy for good luck and for emergencies), and Odysseus's bow. Good luck!")
 
 # Controller
@@ -511,6 +507,11 @@ while playing:
         print("Fight it.")
 
     command = input(">_")
+
+    if command in short_directions:
+        pos = short_directions.index(command)
+        command = directions[pos]
+
     print()
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
@@ -563,6 +564,9 @@ while playing:
             if treasures == 11:
                 playing = False
                 print("You won the game")
+
+    elif "g" in command:
+        player.current_location = Greece
 
     else:
         print("Command not recognized.")
