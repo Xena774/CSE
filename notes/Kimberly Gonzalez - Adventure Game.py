@@ -3,10 +3,16 @@ import random
 
 def fight(enemy):
     while enemy.health > 0 and player.health > 0:
-        lcommand = input("What do you want to do?")
-        player.attack(enemy)
-        enemy.attack(player)
-        # player.take_damage(player.current_location.characters)
+        attack = input("What do you want to do?")
+        if attack in ['attack', 'fight']:
+            player.attack(enemy)
+            enemy.attack(player)
+            # player.take_damage(player.current_location.characters)
+
+        else:
+            player.attack(enemy)
+            enemy.attack(player)
+            # player.take_damage(player.current_location.characters)
 
     if enemy.health <= 0:
         print("Enemy has been eliminated.")
@@ -204,12 +210,16 @@ class GoldenReef(Treasure):
 
 
 class Inventory(object):
-    def __init__(self, items=[]):
+    def __init__(self, items=None):
+        if items is None:
+            items = []
         self.items = items
 
 
 class Room(object):
-    def __init__(self, name, description, north=None, south=None, east=None, west=None, characters=None, items=[]):
+    def __init__(self, name, description, north=None, south=None, east=None, west=None, characters=None, items=None):
+        if items is None:
+            items = []
         self.name = name
         self.description = description
         self.north = north
@@ -243,47 +253,48 @@ class Bard(object):
     def __init__(self):
         self.health = 100
         self.description = "Here is a bard or a random spewer of quotes that many people don't understand."
+        self.chance = 0
 
     def quotes(self):
-        chance = random.randint(1, 10)
-        if chance == 1:
+        self.chance = random.randint(1, 10)
+        if self.chance == 1:
             print("Life without experience and sufferings is not life.")
 
-        elif chance == 2:
+        elif self.chance == 2:
             print("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the"
                   " imagination, and charm and gaiety to life and to everything.")
 
-        elif chance == 3:
+        elif self.chance == 3:
             print("Whenever you find yourself on the side of the majority, it is time to pause and reflect.")
 
-        elif chance == 4:
+        elif self.chance == 4:
             print("Be kind, for everyone you meet is fighting a hard battle.")
 
-        elif chance == 5:
+        elif self.chance == 5:
             print("Every heart sings a song, incomplete, until another heart whispers back . Those who wish to sing"
                   " always find a song.")
 
-        elif chance == 6:
+        elif self.chance == 6:
             print("Wise men talk because they have something to say; fools, because they have to say something.")
 
-        elif chance == 7:
+        elif self.chance == 7:
             print("People are more difficult to work with than machines. And when you break a person, he can't be"
                   " fixed")
 
-        elif chance == 8:
+        elif self.chance == 8:
             print("Comic books to me are fairy tales for grown-ups.")
 
-        elif chance == 9:
+        elif self.chance == 9:
             print("You control your own life. Your own will is extremely powerful.")
 
-        elif chance == 10:
+        elif self.chance == 10:
             print("If my life is going to mean anything, I have to live it myself.")
 
-        elif chance == 11:
+        elif self.chance == 11:
             print("We've all got both light and dark inside us. What matters is the part we choose to act on . That's "
                   "who we really are. ")
 
-        elif chance == 12:
+        elif self.chance == 12:
             print("Being a hero doesn't mean you are invincible, it means you are brave enough to stand up and do"
                   " what's right.")
 
@@ -517,9 +528,9 @@ while playing:
         playing = False
 
     elif "got" in command:
-        playing = 11
+        treasures = 11
 
-    elif treasures == 11:
+    elif treasures >= 11:
         playing = False
 
     elif command in directions:
@@ -534,13 +545,13 @@ while playing:
     elif "pick up all" in command:
         for item in player.current_location.item:
             player.inventory.append(item)
-            player.current_location.item.remove(item)
             print("You picked up %s" % item.name)
             treasures += 1
 
             if treasures == 11:
                 playing = False
                 print("You won the game")
+        player.current_location.item = []
 
     elif command.lower() in ['attack', 'fight', 'demolish']:
         fight(player.current_location.characters)
