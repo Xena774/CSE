@@ -494,6 +494,10 @@ print("Welcome to Around the World. In this game you travel to different places.
       "state. The goal is to collect things in different places of the world. You have to collect every treasure to"
       " win the game. You are have Camp Half-Blood armor and are armed with the sword Riptide("
       "Given to you by Percy for good luck and for emergencies), and Odysseus's bow. Good luck!")
+print()
+print("The only directions you can go to are west, east, north, and south. To pick up type 'pick up ' and then"
+      " the item unless there's more than one item. If there's more than one item type 'pick up all'. If you want to"
+      "fight type 'fight' or 'attack'.")
 
 # Controller
 while playing:
