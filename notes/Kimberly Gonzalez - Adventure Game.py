@@ -484,7 +484,7 @@ class Player(object):
 
 bard = Bard()
 treasures = 0
-directions = ['north', 'south', 'east', 'west', 'up', 'down']
+directions = ['north', 'south', 'east', 'west']
 short_directions = ['n', 's', 'e', 'w']
 playing = True
 player = Player(Manhattan)
@@ -497,7 +497,7 @@ print("Welcome to Around the World. In this game you travel to different places.
 print()
 print("The only directions you can go to are west, east, north, and south. To pick up type 'pick up ' and then"
       " the item unless there's more than one item. If there's more than one item type 'pick up all'. If you want to"
-      "fight type 'fight' or 'attack'.")
+      "fight type 'fight' or 'attack' or if you're feeling specially evil 'demolish'.")
 
 # Controller
 while playing:
@@ -533,9 +533,8 @@ while playing:
 
     elif "got" in command:
         treasures = 11
-
-    elif treasures >= 11:
-        playing = False
+        if treasures == 11:
+            playing = False
 
     elif command in directions:
         try:
@@ -549,12 +548,13 @@ while playing:
     elif "pick up all" in command:
         for item in player.current_location.item:
             player.inventory.append(item)
+            player.current_location.item.remove(item)
             print("You picked up %s" % item.name)
             treasures += 1
 
             if treasures == 11:
                 playing = False
-                print("You won the game")
+
         player.current_location.item = []
 
     elif command.lower() in ['attack', 'fight', 'demolish']:
@@ -575,10 +575,8 @@ while playing:
             player.inventory.append(found_item)
             player.current_location.item.remove(found_item)
             print("You picked up %s" % item_name)
-            treasures += 1
             if treasures == 11:
                 playing = False
-                print("You won the game")
 
     elif "g" in command:
         player.current_location = Greece
@@ -643,7 +641,7 @@ while playing:
 
 
 if not playing and treasures == 11:
-    print("You won the game.")
+    print("You won the game. Congrats")
 
 else:
     print("You lose the game. Sorry, not sorry.")
