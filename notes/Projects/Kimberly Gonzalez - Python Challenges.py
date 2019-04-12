@@ -1,0 +1,111 @@
+import datetime
+import string
+
+
+def challenge1(first_name, last_name):
+    return "%s %s" % (last_name, first_name)
+
+
+print(challenge1("John", "Doe"))
+
+
+def challenge2(num):
+    if num % 2 == 0:
+        return "This number is even"
+    else:
+        return "This number is odd"
+
+
+print(challenge2(99999990))
+
+
+def challenge3(b, h):
+    return 1/2 * b * h
+
+
+print(challenge3(4, 2))
+
+
+def challenge4(numb):
+    if numb == 0:
+        return "This is zero"
+    elif numb < 0:
+        return "This number is negative"
+    else:
+        return "This number is positive"
+
+
+print(challenge4(6))
+
+
+def challenge5(r):
+    return 3.14 * r ** 2
+
+
+print(challenge5(5))
+
+
+def challenge6(r):
+    return 4/3 * 3.14 * r ** 3
+
+
+print(challenge6(4))
+
+
+def challenge7(n):
+    return n * n + n
+
+
+print(challenge7(9))
+
+
+def challenge8(integer):
+    if integer in range(150, 3000):
+        return "This number is between 150 and 3000"
+    else:
+        return "This number is not between 150 and 3000"
+
+
+print(challenge8(500))
+vowels = ['a', 'e', 'i', 'o', 'u']
+
+
+def challenge9(letters):
+    if letters in vowels:
+        return "This is a vowel"
+    else:
+        return "This is a constant"
+
+
+print(challenge9("r"))
+
+number = ['9', '5', '7', '6']
+letter = list(string.ascii_letters)
+
+
+def challenge10(lis):
+    for i in range(len(lis)):
+        if lis[i] is any(letter):
+            return "This string is not numeric"
+        else:
+            return "This string is numeric"
+
+
+print(challenge10(number))
+
+datetime.datetime.now()
+datetime.datetime(2009, 1, 6, 15, 8, 24, 78915)
+
+print(datetime.datetime.now())
+
+
+def challenge12(a, b):
+    while b != 0:
+        gcd = b
+        b = a % b
+        a = gcd
+    print("The denominator is %d" % a)
+
+
+print(challenge12(3, 4))
+print(12 % 9)
