@@ -1,15 +1,17 @@
 import random
-"""
+
 from termcolor import colored
 """
 import colored
 from colored import stylize
+"""
 
 
 def fight(enemy):
     while enemy.health > 0 and player.health > 0:
-        attack = input("What do you want to do?")
+        attack = input(colored("What do you want to do?", 'red'))
         if attack in ['attack', 'fight']:
+            print(colored("Fight for Glory!!!!!!"), 'red')
             player.attack(enemy)
             enemy.attack(player)
             # player.take_damage(player.current_location.characters)
@@ -20,11 +22,12 @@ def fight(enemy):
             # player.take_damage(player.current_location.characters)
 
     if enemy.health <= 0:
-        print("Enemy has been eliminated.")
+        print(colored("Enemy has been eliminated."), 'red')
         player.current_location.characters = None
 
     if player.health <= 0:
         player.move(Antarctica)
+        player.health = 100
 
 
 class Item(object):
@@ -124,24 +127,24 @@ class CampJupiter(Armor):
 class OdysseusBow(Bow):
     def __init__(self):
         super(OdysseusBow, self).__init__("Odysseus Bow")
-        self.description = "This is the bow Odysseus used to kill Penelope's suitors. The original owner was Eurytus," \
-                           "who was killed for challenging Apollo."
+        self.description = "This is the bow Odysseus used to kill Penelope's suitors. The original owner was \n"\
+                           "Eurytus, who was killed for challenging Apollo."
 
 
 class Riptide(Weapon):
     def __init__(self):
         super(Riptide, self).__init__("Riptide")
         self.attack_power = 50
-        self.description = "This is the sword used by the famous hero Percy Jackson, son of Posiden. This sword was" \
-                           " also owned by Hercules. Zoe Nightshade gave Hercules this sword. It appears as a pen but" \
-                           " uncap it and it's a sword"
+        self.description = "This is the sword used by the famous hero Percy Jackson, son of Posiden. This sword was\n" \
+                           "also owned by Hercules. Zoe Nightshade gave Hercules this sword. It appears as a pen \n"\
+                           "but uncap it and it's a sword"
 
 
 class Excalibur(Sword):
     def __init__(self):
         super(Excalibur, self).__init__("Excalibur")
-        self.description = "This sword was wielded by the legendary King Arthur. This is what made him a true king" \
-                           "and great leader of Camelot. If you watched the series Merlin, then you know all about" \
+        self.description = "This sword was wielded by the legendary King Arthur. This is what made him a true king\n" \
+                           "and great leader of Camelot. If you watched the series Merlin, then you know all about\n" \
                            "it. 'Or Once Upon a Time' it's the bottom part of Rumpelstiltskin dagger."
 
 
@@ -154,8 +157,8 @@ class Imperial(Sword):
 class HerculesClub(Pole):
     def __init__(self):
         super(HerculesClub, self).__init__("Hercules Club")
-        self.description = "This is the pole used by Hercules. He used it when doing his labors to become a God." \
-                           " Nobody likes Hercules"
+        self.description = "This is the pole used by Hercules. He used it when doing his labors to become a God.\n" \
+                           "Nobody likes Hercules"
 
 
 class MummyStaff(Pole):
@@ -203,14 +206,14 @@ class GoldBoat(Treasure):
 class QueenTomb(Treasure):
     def __init__(self):
         super(QueenTomb, self).__init__("Queen Tomb")
-        self.description = "The tomb of the famous Egyptian ruler Nefertiti. There is a bunch of treasure. I'm sure" \
-                           " she had a good afterlife."
+        self.description = "The tomb of the famous Egyptian ruler Nefertiti. There is a bunch of treasure. I'm sure\n" \
+                           "she had a good afterlife."
 
 
 class GoldenReef(Treasure):
     def __init__(self):
         super(GoldenReef, self).__init__("Golden Reef")
-        self.description = "You have traveled all over Australia and have found Lasseter's Reef of discovered by " \
+        self.description = "You have traveled all over Australia and have found Lasseter's Reef of discovered by \n" \
                            "Harold Bell Lasseter in 1911 and 1930."
 
 
@@ -266,7 +269,7 @@ class Bard(object):
             print("Life without experience and sufferings is not life.")
 
         elif self.chance == 2:
-            print("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the"
+            print("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the\n"
                   " imagination, and charm and gaiety to life and to everything.")
 
         elif self.chance == 3:
@@ -276,14 +279,14 @@ class Bard(object):
             print("Be kind, for everyone you meet is fighting a hard battle.")
 
         elif self.chance == 5:
-            print("Every heart sings a song, incomplete, until another heart whispers back . Those who wish to sing"
+            print("Every heart sings a song, incomplete, until another heart whispers back . Those who wish to sing\n"
                   " always find a song.")
 
         elif self.chance == 6:
             print("Wise men talk because they have something to say; fools, because they have to say something.")
 
         elif self.chance == 7:
-            print("People are more difficult to work with than machines. And when you break a person, he can't be"
+            print("People are more difficult to work with than machines. And when you break a person, he can't be\n"
                   " fixed")
 
         elif self.chance == 8:
@@ -296,11 +299,11 @@ class Bard(object):
             print("If my life is going to mean anything, I have to live it myself.")
 
         elif self.chance == 11:
-            print("We've all got both light and dark inside us. What matters is the part we choose to act on . That's "
+            print("We've all got both light and dark inside us. What matters is the part we choose to act on . That's\n"
                   "who we really are. ")
 
         elif self.chance == 12:
-            print("Being a hero doesn't mean you are invincible, it means you are brave enough to stand up and do"
+            print("Being a hero doesn't mean you are invincible, it means you are brave enough to stand up and do\n"
                   " what's right.")
 
 
@@ -496,37 +499,42 @@ playing = True
 player = Player(Manhattan)
 player.armor.armor_life = 100
 
-print(stylize("Welcome to Around the World. In this game you travel to different places. Sometimes it's a city,\n"
-              "country or a state. The goal is to collect things in different places of the world. You have to \n"
-              "collects every treasure to win the game. You are have Camp Half-Blood armor and are armed with \n"
-              "the sword Riptide(Given to you by Percy for good luck and for emergencies), and Odysseus's bow. \n"
-              "Good luck!", colored.fg("dark_sea_green_3b")))
+text = colored("Welcome to Around the World. In this game you travel to different places. Sometimes it's a city,\n"
+               "country or a state. The goal is to collect things in different places of the world. You have to \n"
+               "collects every treasure to win the game. You are wearing Camp Half-Blood armor and are armed with \n"
+               "the sword Riptide(Given to you by Percy for good luck and for emergencies), and Odysseus's bow. \n"
+               "Good luck!", "magenta")
+print(text)
 print()
-print("The only directions you can go to are west, east, north, and south. To pick up type 'pick up ' and then\n"
-      "the item unless there's more than one item. If there's more than one item type 'pick up all'. If you want to\n"
-      "fight type 'fight' or 'attack' or if you're feeling specially evil 'demolish'.")
+print(colored("The only directions you can go to are west, east, north, and south. To pick up type 'pick up ' and\n"
+      "then the item unless there's more than one item. If there's more than one item type 'pick up all'. If you want\n"
+              "to fight type 'fight' or 'attack' or if you're feeling especially evil 'demolish'.", "magenta"))
+
+print()
+print("----------------------------------------------------------------")
+print()
 
 # Controller
 while playing:
-    print(player.current_location.name)
-    print(player.current_location.description)
+    print(colored(player.current_location.name, 'green'))
+    print(colored(player.current_location.description, 'cyan'))
     print()
     if len(player.current_location.item) > 0:
         print()
         print("There are the following items in the room:")
 
         for num, current_item in enumerate(player.current_location.item):
-            print(str(num + 1) + ": ", end="")
+            print(str(num + 1) + ": ", end="",)
             print(current_item.name + " - ", end="")
-            print(current_item.description)
+            print(colored(current_item.description, 'blue'))
             print()
-            print('Pick them up.')
+            print(colored('Pick them up.', 'blue'))
         print()
 
     elif player.current_location.characters is not None:
-        print("There is an enemy in here.")
-        print("It is a %s" % player.current_location.characters.name)
-        print("Fight it.")
+        print(colored("There is an enemy in here.", 'red'))
+        print(colored("It is a %s" % player.current_location.characters.name, 'red'))
+        print(colored("Fight it.", 'red'))
 
     command = input(">_")
 
@@ -557,7 +565,7 @@ while playing:
             player.inventory.append(item)
             player.current_location.item.remove(item)
             print("You picked up %s" % item.name)
-            treasures += 1
+            treasures += 2
 
             if treasures == 11:
                 playing = False
@@ -585,7 +593,7 @@ while playing:
             if treasures == 11:
                 playing = False
 
-    elif "g" in command:
+    elif "greece" in command:
         player.current_location = Greece
 
     else:
@@ -596,55 +604,65 @@ while playing:
     random_move = random.randint(1, 100)
     if random_move > 50:
         if random_move < 10:
-            print("You are the lucky contestant to get quoted by some random person.")
+            print(colored("You are the lucky contestant to get quoted by some random person.", 'yellow'))
             print()
-            bard.quotes()
+            colored(bard.quotes(), 'yellow')
             print()
+            print("----------------------------------------------------------------")
 
         elif random_move >= 10 < 20:
-            print("You have terrible luck. Here's a quote")
+            print(colored("You have terrible luck. Here's a quote", 'yellow'))
             print()
-            bard.quotes()
+            colored(bard.quotes(), 'yellow')
             print()
+            print("----------------------------------------------------------------")
 
         elif random_move >= 20 < 30:
-            print("DUUN, DUUN, DUUUUUNNNNNNNNN!!!")
+            print(colored("DUUN, DUUN, DUUUUUNNNNNNNNN!!!", 'yellow'))
             print()
-            bard.quotes()
+            colored(bard.quotes(), 'yellow')
             print()
+            print("----------------------------------------------------------------")
 
         elif random_move >= 30 < 40:
-            print("It's coming for you.")
+            print(colored("It's coming for you.", 'yellow'))
             print()
-            bard.quotes()
+            colored(bard.quotes(), 'yellow')
             print()
+            print("----------------------------------------------------------------")
 
         else:
-            print("Don't you just love quotes")
+            print(colored("Don't you just love quotes", 'yellow'))
             print()
-            bard.quotes()
+            colored(bard.quotes(), 'yellow')
             print()
+            print("----------------------------------------------------------------")
 
     else:
         if random_move < 60:
-            print("You escaped getting a random quote. You can't avoid it for long.")
+            print(colored("You escaped getting a random quote. You can't avoid it for long.", 'yellow'))
             print()
+            print("----------------------------------------------------------------")
 
         elif random_move >= 60 < 70:
-            print("You won't escape for long.")
+            print(colored("You won't escape for long.", 'yellow'))
             print()
+            print("----------------------------------------------------------------")
 
         elif random_move >= 70 < 80:
-            print("The quotes are coming for you...")
+            print(colored("The quotes are coming for you...", 'yellow'))
             print()
+            print("----------------------------------------------------------------")
 
         elif random_move >= 80 < 90:
-            print("How have you avoided the quotes.")
+            print(colored("How have you avoided the quotes.", 'yellow'))
             print()
+            print("----------------------------------------------------------------")
 
         else:
-            print("Remember the quotes are coming.")
+            print(colored("Remember the quotes are coming.", 'yellow'))
             print()
+            print("----------------------------------------------------------------")
 
 
 if not playing and treasures == 11:
