@@ -564,7 +564,7 @@ while playing:
         for item in player.current_location.item:
             player.inventory.append(item)
             player.current_location.item.remove(item)
-            print("You picked up %s" % item.name)
+            print(colored("You picked up %s" % item.name, 'blue'))
             treasures += 2
 
             if treasures == 11:
@@ -589,7 +589,7 @@ while playing:
         else:
             player.inventory.append(found_item)
             player.current_location.item.remove(found_item)
-            print("You picked up %s" % item_name)
+            print(colored("You picked up %s" % item_name, "blue"))
             if treasures == 11:
                 playing = False
 
@@ -597,7 +597,7 @@ while playing:
         player.current_location = Greece
 
     else:
-        print("Command not recognized.")
+        print(colored("Command not recognized.", 'magenta'))
         print()
 
     # Random Move
