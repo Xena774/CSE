@@ -266,45 +266,47 @@ class Bard(object):
     def quotes(self):
         self.chance = random.randint(1, 10)
         if self.chance == 1:
-            print("Life without experience and sufferings is not life.")
+            print(colored("Life without experience and sufferings is not life.", 'yellow'))
 
         elif self.chance == 2:
-            print("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the\n"
-                  " imagination, and charm and gaiety to life and to everything.")
+            print(colored("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the\n"
+                  " imagination, and charm and gaiety to life and to everything.", 'yellow'))
 
         elif self.chance == 3:
-            print("Whenever you find yourself on the side of the majority, it is time to pause and reflect.")
+            print(colored("Whenever you find yourself on the side of the majority, it is time to pause and reflect.",
+                          'yellow'))
 
         elif self.chance == 4:
-            print("Be kind, for everyone you meet is fighting a hard battle.")
+            print(colored("Be kind, for everyone you meet is fighting a hard battle.", 'yellow'))
 
         elif self.chance == 5:
-            print("Every heart sings a song, incomplete, until another heart whispers back . Those who wish to sing\n"
-                  " always find a song.")
+            print(colored("Every heart sings a song, incomplete, until another heart whispers back . Those who wish\n"
+                          "to sing always find a song.", 'yellow'))
 
         elif self.chance == 6:
-            print("Wise men talk because they have something to say; fools, because they have to say something.")
+            print(colored("Wise men talk because they have something to say; fools, because they have to say."
+                          "something", 'yellow'))
 
         elif self.chance == 7:
-            print("People are more difficult to work with than machines. And when you break a person, he can't be\n"
-                  " fixed")
+            print(colored("People are more difficult to work with than machines. And when you break a person, he \n"
+                  "can't be fixed", 'yellow'))
 
         elif self.chance == 8:
-            print("Comic books to me are fairy tales for grown-ups.")
+            print(colored("Comic books to me are fairy tales for grown-ups.", 'yellow'))
 
         elif self.chance == 9:
-            print("You control your own life. Your own will is extremely powerful.")
+            print(colored("You control your own life. Your own will is extremely powerful.", 'yellow'))
 
         elif self.chance == 10:
-            print("If my life is going to mean anything, I have to live it myself.")
+            print(colored("If my life is going to mean anything, I have to live it myself.", 'yellow'))
 
         elif self.chance == 11:
-            print("We've all got both light and dark inside us. What matters is the part we choose to act on . That's\n"
-                  "who we really are. ")
+            print(colored("We've all got both light and dark inside us. What matters is the part we choose to act on.\n"
+                          "That's who we really are.", "yellow"))
 
         elif self.chance == 12:
-            print("Being a hero doesn't mean you are invincible, it means you are brave enough to stand up and do\n"
-                  " what's right.")
+            print(colored("Being a hero doesn't mean you are invincible, it means you are brave enough to stand up\n"
+                  "and do what's right.", 'yellow'))
 
 
 class Enemy(object):
@@ -521,11 +523,11 @@ while playing:
     print()
     if len(player.current_location.item) > 0:
         print()
-        print("There are the following items in the room:")
+        print(colored("There are the following items in the room:", 'blue'))
 
         for num, current_item in enumerate(player.current_location.item):
-            print(str(num + 1) + ": ", end="",)
-            print(current_item.name + " - ", end="")
+            print(colored(str(num + 1) + ": ", "blue"), end="", )
+            print(colored(current_item.name + " - ", "blue"), end="")
             print(colored(current_item.description, 'blue'))
             print()
             print(colored('Pick them up.', 'blue'))
@@ -565,7 +567,10 @@ while playing:
             player.inventory.append(item)
             player.current_location.item.remove(item)
             print(colored("You picked up %s" % item.name, 'blue'))
-            treasures += 2
+            if len(player.current_location.item) > 1:
+                treasures += 2
+            else:
+                treasures += 1
 
             if treasures == 11:
                 playing = False
@@ -595,6 +600,12 @@ while playing:
 
     elif "greece" in command:
         player.current_location = Greece
+
+    elif command in ['show', 'show items', 'items']:
+        if len(player.inventory) > 0:
+            print(colored("".join(player.inventory), "magenta"))
+        else:
+            print(colored("You haven't collected anything.", 'magenta'))
 
     else:
         print(colored("Command not recognized.", 'magenta'))
@@ -664,9 +675,8 @@ while playing:
             print()
             print("----------------------------------------------------------------")
 
-
 if not playing and treasures == 11:
-    print("You won the game. Congrats")
+    print(colored("You won the game. Congrats", 'grey'))
 
 else:
-    print("You lose the game. Sorry, not sorry.")
+    print(colored("You lose the game. Sorry, not sorry.", 'grey'))
