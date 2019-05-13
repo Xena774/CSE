@@ -2,9 +2,9 @@ import csv
 
 item_profit = {}
 region_profit = {}
+units = {}
 top_item_profit = 0
 top_region_profit = 0
-
 
 with open("Sales Records.csv", 'r') as old_csv:
     reader = csv.reader(old_csv)
@@ -14,6 +14,7 @@ with open("Sales Records.csv", 'r') as old_csv:
         item = row[2]
         Indv_profit = float(row[13])
         region = row[0]
+        units_sold = float(row[9])
 
         try:
             item_profit[item] += Indv_profit
@@ -22,6 +23,7 @@ with open("Sales Records.csv", 'r') as old_csv:
         except KeyError:
             item_profit[item] = Indv_profit
             region_profit[region] = Indv_profit
+            
 
         if item_profit[item] > top_item_profit:
             top_item_profit = item_profit[item]
@@ -36,3 +38,4 @@ with open("Sales Records.csv", 'r') as old_csv:
     for key, value in region_profit.items():
         if value == top_region_profit:
             print(key)
+
