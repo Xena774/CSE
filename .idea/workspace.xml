@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/Kimberly Gonzalez - Sales Record.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="270">
+              <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -354,18 +354,19 @@
       <workItem from="1557434631328" duration="3271000" />
       <workItem from="1557522033702" duration="2930000" />
       <workItem from="1557780029931" duration="3321000" />
-      <workItem from="1557866502541" duration="3343000" />
+      <workItem from="1557866502541" duration="3369000" />
+      <workItem from="1557953018821" duration="3215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43505000" />
+    <option name="totallyTimeSpent" value="46746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39072496" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39498934" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -398,7 +399,7 @@
     <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Validator.coverage" NAME="Kimberly Gonzalez - Validator Coverage Results" MODIFIED="1556830901783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Dictionary_Notes.coverage" NAME="Dictionary Notes Coverage Results" MODIFIED="1557522596289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$CSVNotes.coverage" NAME="CSVNotes Coverage Results" MODIFIED="1556654222043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Sales_Record.coverage" NAME="Kimberly Gonzalez - Sales Record Coverage Results" MODIFIED="1557869807120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Sales_Record.coverage" NAME="Kimberly Gonzalez - Sales Record Coverage Results" MODIFIED="1557956316282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Adventure_Game.coverage" NAME="Kimberly Gonzalez - Adventure Game Coverage Results" MODIFIED="1557177435872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Kimberly_Gonzalez___Validator__1_.coverage" NAME="Kimberly Gonzalez - Validator (1) Coverage Results" MODIFIED="1557177610158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
   </component>
@@ -581,8 +582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Kimberly Gonzalez - Sales Record.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="270">
+          <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
         </state>
       </provider>
     </entry>
