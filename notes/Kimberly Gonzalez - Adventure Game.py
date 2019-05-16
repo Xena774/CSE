@@ -270,43 +270,45 @@ class Bard(object):
 
         elif self.chance == 2:
             print(colored("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the\n"
-                  " imagination, and charm and gaiety to life and to everything.", 'yellow'))
+                  " imagination, and charm and gaiety to life and to everything. - Plato", 'yellow'))
 
         elif self.chance == 3:
-            print(colored("Whenever you find yourself on the side of the majority, it is time to pause and reflect.",
+            print(colored("Whenever you find yourself on the side of the majority, it is time to pause and reflect. - "
+                          "Mark Twain",
                           'yellow'))
 
         elif self.chance == 4:
-            print(colored("Be kind, for everyone you meet is fighting a hard battle.", 'yellow'))
+            print(colored("Be kind, for everyone you meet is fighting a hard battle. - Socrates", 'yellow'))
 
         elif self.chance == 5:
             print(colored("Every heart sings a song, incomplete, until another heart whispers back . Those who wish\n"
-                          "to sing always find a song.", 'yellow'))
+                          "to sing always find a song. - Plato", 'yellow'))
 
         elif self.chance == 6:
-            print(colored("Wise men talk because they have something to say; fools, because they have to say."
-                          "something", 'yellow'))
+            print(colored("Wise men talk because they have something to say; fools, because they have to say.\n"
+                          "something - Plato", 'yellow'))
 
         elif self.chance == 7:
             print(colored("People are more difficult to work with than machines. And when you break a person, he \n"
-                  "can't be fixed", 'yellow'))
+                  "can't be fixed. - Hephaestus, The Battle of the Labyrinth, Rick Riordan", 'yellow'))
 
         elif self.chance == 8:
-            print(colored("Comic books to me are fairy tales for grown-ups.", 'yellow'))
+            print(colored("Comic books to me are fairy tales for grown-ups. - Stan Lee", 'yellow'))
 
         elif self.chance == 9:
-            print(colored("You control your own life. Your own will is extremely powerful.", 'yellow'))
+            print(colored("You control your own life. Your own will is extremely powerful. - J.K. Rowling", 'yellow'))
 
         elif self.chance == 10:
-            print(colored("If my life is going to mean anything, I have to live it myself.", 'yellow'))
+            print(colored("If my life is going to mean anything, I have to live it myself. - Sally Jackson, The \n"
+                          "Lightning Thief, Rick Riordan", 'yellow'))
 
         elif self.chance == 11:
             print(colored("We've all got both light and dark inside us. What matters is the part we choose to act on.\n"
-                          "That's who we really are.", "yellow"))
+                          "That's who we really are. - Sirius Black, Order of the Phoenix, J.K. Rowling", "yellow"))
 
         elif self.chance == 12:
             print(colored("Being a hero doesn't mean you are invincible, it means you are brave enough to stand up\n"
-                  "and do what's right.", 'yellow'))
+                  "and do what's needed. - Piper Mclean, Mark of Athena, Rick Riordan", 'yellow'))
 
 
 class Enemy(object):

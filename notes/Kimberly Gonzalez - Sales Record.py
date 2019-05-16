@@ -16,8 +16,6 @@ with open("Sales Records.csv", 'r') as old_csv:
         Indv_profit = float(row[13])
         region = row[0]
         units_sold = int(row[8])
-        unit_price = float(row[9])
-        unit_cost = float(row[10])
 
         try:
             item_profit[item] += Indv_profit
@@ -35,19 +33,18 @@ with open("Sales Records.csv", 'r') as old_csv:
         if region_profit[region] > top_region_profit:
             top_region_profit = region_profit[region]
 
-        if item_profit[item]/units_dict[item] > units:
-            units = round(item_profit[item]/units_dict[item], 2)
-
     for key, value in item_profit.items():
         if value == top_item_profit:
-            print(key)
+            print("The most profitable item is %s." % key)
 
     for key, value in region_profit.items():
         if value == top_region_profit:
-            print(key)
+            print("The most profitable region is %s" % key)
 
     for key, value in units_dict.items():
-        print(round(item_profit[item] / value, 2))
-        print(units)
-        if round(value / units_dict[item], 2) == units:
-            print(key + "!!!!!!!!!!!!!!!!!!")
+        if item_profit[key] / value > units:
+            units = item_profit[key] / value
+
+    for key, value in units_dict.items():
+        if item_profit[key] / value == units:
+            print("The most profitable per unit is %s!!!" % key)
