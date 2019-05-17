@@ -266,7 +266,7 @@ class Bard(object):
     def quotes(self):
         self.chance = random.randint(1, 10)
         if self.chance == 1:
-            print(colored("Life without experience and sufferings is not life.", 'yellow'))
+            print(colored("Life without experience and sufferings is not life. - Socrates", 'yellow'))
 
         elif self.chance == 2:
             print(colored("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the\n"

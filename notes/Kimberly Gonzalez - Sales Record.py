@@ -47,4 +47,4 @@ with open("Sales Records.csv", 'r') as old_csv:
 
     for key, value in units_dict.items():
         if item_profit[key] / value == units:
-            print("The most profitable per unit is %s!!!" % key)
+            print("The most profitable per unit is %s with a whooping $%d per unit!!!" % (key, units))
