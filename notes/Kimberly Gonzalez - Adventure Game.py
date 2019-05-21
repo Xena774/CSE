@@ -270,12 +270,11 @@ class Bard(object):
 
         elif self.chance == 2:
             print(colored("Music is a moral law. It gives soul to the universe, wings to the mind, flight to the\n"
-                  " imagination, and charm and gaiety to life and to everything. - Plato", 'yellow'))
+                  "imagination, and charm and gaiety to life and to everything. - Plato", 'yellow'))
 
         elif self.chance == 3:
-            print(colored("Whenever you find yourself on the side of the majority, it is time to pause and reflect. - "
-                          "Mark Twain",
-                          'yellow'))
+            print(colored("Whenever you find yourself on the side of the majority, it is time to pause and reflect."
+                          "- Mark Twain", 'yellow'))
 
         elif self.chance == 4:
             print(colored("Be kind, for everyone you meet is fighting a hard battle. - Socrates", 'yellow'))
@@ -512,7 +511,8 @@ print(text)
 print()
 print(colored("The only directions you can go to are west, east, north, and south. To pick up type 'pick up ' and\n"
       "then the item unless there's more than one item. If there's more than one item type 'pick up all'. If you want\n"
-              "to fight type 'fight' or 'attack' or if you're feeling especially evil 'demolish'.", "magenta"))
+              "to fight type 'fight' or 'attack' or if you're feeling especially evil 'demolish'. Also, "
+              "if you want a story type 'story time'", "magenta"))
 
 print()
 print("----------------------------------------------------------------")
@@ -550,12 +550,12 @@ while playing:
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
 
-    elif "got" in command:
+    elif "got" in command.lower():
         treasures = 11
         if treasures == 11:
             playing = False
 
-    elif command in directions:
+    elif command.lower() in directions:
         try:
             next_room = player.find_room(command)
             player.move(next_room)
@@ -564,7 +564,7 @@ while playing:
             print("I can't go that way")
             print()
 
-    elif "pick up all" in command:
+    elif "pick up all" in command.lower():
         for item in player.current_location.item:
             player.inventory.append(item)
             player.current_location.item.remove(item)
@@ -582,7 +582,7 @@ while playing:
     elif command.lower() in ['attack', 'fight', 'demolish']:
         fight(player.current_location.characters)
 
-    elif "pick up " in command:
+    elif "pick up " in command.lower():
         item_name = command[8:]
 
         found_item = None
@@ -600,10 +600,46 @@ while playing:
             if treasures == 11:
                 playing = False
 
-    elif "greece" in command:
+    elif "greece" in command.lower():
         player.current_location = Greece
 
-    elif command in ['show', 'show items', 'items']:
+    elif "story time" in command.lower():
+        random_story = random.randint(1, 1000)
+
+        if random_story < 100:
+            print(colored("Two guys fall in love with each other. So they told their parents but they weren't\n"
+                          "accepting. So one day, they decided to run away. As they did, they bump into a little girl\n"
+                          "who was abandoned and was no older than 6. They decided to take her into their little\n"
+                          "family. Soon they live a happy life without people judging them. The end. - Courtesy of "
+                          "Seanti", "grey"))
+
+        if random_story >= 100 < 200:
+            print(colored('Damocles was jealous of his king Dionysus who had everything he should ever ask for. When \n'
+                          'Damocles told the king of this, the king suggested that Damocles be king for a day to\n '
+                          'see what is was like. The king put a sword above his head that was held by a thin and\n'
+                          'fragile string to show the fear kings have that somebody will overtake him. Damocles\n'
+                          'could not take it and realized that with great power comes great danger - Cicero', 'grey'))
+
+        if random_story >= 200 < 300:
+            print(colored('A little boy was at the beach and said, "No matter how many times you touch my feet, I\n'
+                          'will not forgive you for taking my parents away."', 'grey'))
+
+        if random_story >= 300 < 400:
+            print(colored('A wise man sat in the audience and cracked a joke. Everybody laughs and after a moment he\n'
+                          'cracks the same joke. This time, less people laughed. He cracked the same joke over and\n'
+                          'over again till there was no more laughter. He smiled and said, "You can not keep laughing\n'
+                          'at the same joke over and over again, so why do you cry at the same thing over and over '
+                          'again?', 'grey'))
+
+        if random_story >= 400 < 500:
+            print(colored('As the guy was walking away, the girl who was crying yelled out,"No matter how many times it'
+                          'hurts, I still love you." - Courtesy of Seanti', 'grey'))
+
+        if random_story >= 500 < 600:
+            print(colored('An old man went to the store. Phone story, japenese phone moutain, pompeii, '
+                          'concentration camps', 'grey'))
+
+    elif command.lower() in ['show', 'show items', 'items']:
         if len(player.inventory) > 0:
             print(colored("".join(player.inventory), "magenta"))
         else:
