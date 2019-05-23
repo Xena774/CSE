@@ -501,6 +501,7 @@ short_directions = ['n', 's', 'e', 'w']
 playing = True
 player = Player(Manhattan)
 player.armor.armor_life = 100
+question_limit = 0
 
 text = colored("Welcome to Around the World. In this game you travel to different places. Sometimes it's a city,\n"
                "country or a state. The goal is to collect things in different places of the world. You have to \n"
@@ -511,8 +512,10 @@ print(text)
 print()
 print(colored("The only directions you can go to are west, east, north, and south. To pick up type 'pick up ' and\n"
       "then the item unless there's more than one item. If there's more than one item type 'pick up all'. If you want\n"
-              "to fight type 'fight' or 'attack' or if you're feeling especially evil 'demolish'. Also, "
-              "if you want a story type 'story time'", "magenta"))
+              "to fight type 'fight' or 'attack' or if you're feeling especially evil 'demolish'. Also, \n"
+              "if you want a story type 'story time'. Or if you want extra health points by answering questions, type\n"
+              "'question time' and for every question you get right you get 10 health points. Yo can only answer\n"
+              "a max of five questions.", "magenta"))
 
 print()
 print("----------------------------------------------------------------")
@@ -603,41 +606,125 @@ while playing:
     elif "greece" in command.lower():
         player.current_location = Greece
 
-    elif "story time" in command.lower():
-        random_story = random.randint(1, 1000)
+    elif "question time" in command.lower():
 
-        if random_story < 100:
+        if question_limit == 0:
+            answer1 = input("What is the name of the song? 'Don't wanna know, what kind of dress you're wearing "
+                            "tonight...'")
+            print()
+            if answer1 == "we don't talk anymore" or "We don't talk anymore" or "we dont talk anymore":
+                player.health += 10
+                print("You got it!!!")
+
+            else:
+                print("You got it wrong.")
+            question_limit += 1
+
+        elif question_limit == 1:
+            answer2 = input("Finish the sentence. 'I am ...'")
+            print()
+            if answer2 == "iron man":
+                print("You got it!!!")
+                player.health += 10
+
+            else:
+                print("You got it wrong.")
+            question_limit += 1
+
+        elif question_limit == 2:
+            answer3 = input("What is Beyonce's net worth?")
+            print()
+            if answer3 == "500 million" or "five hundred million":
+                print("You got it!!!")
+                player.health += 10
+
+            else:
+                print("You got it wrong.")
+            question_limit += 1
+
+        elif question_limit == 3:
+            answer4 = input("What is Demi Lovato's debut album?")
+            print()
+            if answer4 == "Don't Forget" or "Don't forget" or "don't forget":
+                print("You got it!!!")
+                player.health += 10
+
+            else:
+                print("You got it wrong.")
+            question_limit += 1
+
+        elif question_limit == 4:
+            answer5 = input("What do you put in first cereal or milk?")
+            question_limit += 1
+            print()
+            if answer5 == "cereal" or "Cereal":
+                print("You got it!!!")
+                player.health += 10
+
+            else:
+                print("You got it wrong.")
+            question_limit += 1
+
+        else:
+            print("You ran out of questions")
+
+    elif "story time" in command.lower():
+        random_story = random.randint(1, 9)
+
+        if random_story == 1:
             print(colored("Two guys fall in love with each other. So they told their parents but they weren't\n"
                           "accepting. So one day, they decided to run away. As they did, they bump into a little girl\n"
                           "who was abandoned and was no older than 6. They decided to take her into their little\n"
                           "family. Soon they live a happy life without people judging them. The end. - Courtesy of "
                           "Seanti", "grey"))
 
-        if random_story >= 100 < 200:
+        elif random_story == 2:
             print(colored('Damocles was jealous of his king Dionysus who had everything he should ever ask for. When \n'
                           'Damocles told the king of this, the king suggested that Damocles be king for a day to\n '
                           'see what is was like. The king put a sword above his head that was held by a thin and\n'
                           'fragile string to show the fear kings have that somebody will overtake him. Damocles\n'
                           'could not take it and realized that with great power comes great danger - Cicero', 'grey'))
 
-        if random_story >= 200 < 300:
+        elif random_story == 30:
             print(colored('A little boy was at the beach and said, "No matter how many times you touch my feet, I\n'
                           'will not forgive you for taking my parents away."', 'grey'))
 
-        if random_story >= 300 < 400:
+        elif random_story == 4:
             print(colored('A wise man sat in the audience and cracked a joke. Everybody laughs and after a moment he\n'
                           'cracks the same joke. This time, less people laughed. He cracked the same joke over and\n'
                           'over again till there was no more laughter. He smiled and said, "You can not keep laughing\n'
                           'at the same joke over and over again, so why do you cry at the same thing over and over '
                           'again?', 'grey'))
 
-        if random_story >= 400 < 500:
+        elif random_story == 5:
             print(colored('As the guy was walking away, the girl who was crying yelled out,"No matter how many times it'
                           'hurts, I still love you." - Courtesy of Seanti', 'grey'))
 
-        if random_story >= 500 < 600:
-            print(colored('An old man went to the store. Phone story, japenese phone moutain, pompeii, '
+        elif random_story == 6:
+            print(colored('An old man went to the phone store. He told the worker that his phone was broken. The\n'
+                          'worker looked at his phone and checked if his phone was broken. The worker then said that\n'
+                          'the phone was perfectly fine. The old man then asked, "Then why do my kids never call me?"'
                           'concentration camps', 'grey'))
+
+        elif random_story == 7:
+            print(colored("In Otsuchi, Japan there is a phone on top of a grassy hill. The phone is called the 'phone\n"
+                          "of the wind'. People come here to call their dead love ones. The disconnected rotary phone\n"
+                          "located inside a glass booth allows callers to send verbal messages to those they've lost.\n"
+                          "The wind then carries it away. Lot's of grieving people come here to give one last message.",
+                          'grey'))
+
+        elif random_story == 8:
+            print(colored('"All my toys are yours." His older sister read as she recited her brothers last word.',
+                          'grey'))
+
+        elif random_story == 9:
+            print(colored('Sisyphus was an old greek king. He was ruthless that killed travellers and guest. \n'
+                          'He infuriated Zeus when told Asopus,a river go, where his daughter Aegina was.(She was\n'
+                          'kidnapped by Zeus) Zeus was now done with Sisyphus and told Thanatos, god of death, to\n'
+                          'bring him and chain him in the Underworld. Ares was not happy no one could die and freed\n'
+                          'Thanatos and gave him Sisyphus. His punishment in the Underworld was that he had to push a\n'
+                          'a boulder up a hill and when he reached th etop it rolled back down and Sisyphus had to\n'
+                          'roll it back up.', 'grey'))
 
     elif command.lower() in ['show', 'show items', 'items']:
         if len(player.inventory) > 0:
