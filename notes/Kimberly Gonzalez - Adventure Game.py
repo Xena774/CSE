@@ -334,7 +334,7 @@ class Enemy(object):
 
 class Mummy(Enemy):
     def __init__(self):
-        super(Mummy, self).__init__("Mummy", 100, mummies_staff, None)
+        super(Mummy, self).__init__("Mummy", 100, mummies_staff, camp_jupiter_armor)
 
 
 class Gladiator(Enemy):
@@ -344,7 +344,7 @@ class Gladiator(Enemy):
 
 class Hydra(Enemy):
     def __init__(self):
-        super(Hydra, self).__init__("Hydra", 1000, hydra_poison, None)
+        super(Hydra, self).__init__("Hydra", 1000, hydra_poison, camp_jupiter_armor)
 
 
 # My own
